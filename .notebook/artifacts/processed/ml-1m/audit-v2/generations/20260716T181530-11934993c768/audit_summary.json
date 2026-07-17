@@ -1,0 +1,17 @@
+{
+  "audit_schema_version": "ml1m-audit-v2",
+  "catalog_items": 3883,
+  "data_audit_pass": true,
+  "data_parsed": true,
+  "dataset": "MovieLens-1M",
+  "matrix_density": 0.04264679797998748,
+  "matrix_sparsity": 0.9573532020200125,
+  "rated_items": 3706,
+  "ratings": 1000209,
+  "release": "ml-1m",
+  "source_found": true,
+  "timestamp_max_utc": "2003-02-28T17:49:50+00:00",
+  "timestamp_min_utc": "2000-04-25T23:05:32+00:00",
+  "unparsed_release_years": 0,
+  "users": 6040
+}

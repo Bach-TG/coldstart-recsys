@@ -1,0 +1,12 @@
+feature,source,side,raw_or_derived,cardinality,missing,lightgcn_role,emerg_dgd_role,downstream_action,leakage_control
+user_id,ratings.dat/users.dat,user,raw,6040,0,graph identity,categorical identity,map after split,fit mapping on protocol-visible IDs
+gender,users.dat,user,raw,2,0,none,categorical feature,encode after split,fit encoder on training-visible data
+age,users.dat,user,raw code,7,0,none,categorical feature,encode documented code,fit encoder on training-visible data
+occupation,users.dat,user,raw code,21,0,none,categorical feature,encode documented code,fit encoder on training-visible data
+zip_code,users.dat,user,raw string,3439,0,none,categorical feature,encode after split,fit vocabulary on training-visible data
+item_id,ratings.dat/movies.dat,item,raw,3883,0,graph identity,categorical identity,map after split,preserve cold-item membership
+title,movies.dat,item,raw string,3883,0,none,sequence feature,tokenize after split,fit vocabulary on training-visible data
+release_year,movies.dat:title,item,derived,81,0,none,categorical feature,encode after split,deterministic title-only derivation
+genres,movies.dat,item,raw pipe list,301,0,none,multi-value feature,encode after split,fit vocabulary on training-visible data
+rating,ratings.dat,interaction,raw,5,0,edge policy deferred,target source,derive label in notebook 02,never expose held-out targets
+timestamp,ratings.dat,interaction,raw,458455,0,protocol ordering,not a model feature,use for chronological phases,never encode future time as a feature

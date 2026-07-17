@@ -1,0 +1,5 @@
+run_name,epoch,loss,examples
+gd_tuning_emerg_backbone,1,0.5882473420351744,262144
+gd_tuning_emerg_backbone,2,0.544147283770144,262144
+gd_tuning_emerg_backbone,3,0.5331932650879025,262144
+gd_tuning_emerg_backbone,4,0.523020101711154,262144

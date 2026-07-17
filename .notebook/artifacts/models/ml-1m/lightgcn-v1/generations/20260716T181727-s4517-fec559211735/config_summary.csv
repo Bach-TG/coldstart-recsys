@@ -1,0 +1,3 @@
+config_name,mean_validation_f1,mean_validation_auc,training_seconds,embedding_dim,n_layers,learning_rate,weight_decay,epochs,sample_size
+cfg01_L2_D64,0.7593771922404978,0.49901324923506024,4.264940213004593,64,2,0.003,0.0001,12,65536
+cfg02_L3_D64,0.7593761166838144,0.5028388941940701,4.591197656991426,64,3,0.003,0.0001,12,65536

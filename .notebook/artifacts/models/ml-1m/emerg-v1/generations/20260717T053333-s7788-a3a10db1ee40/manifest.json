@@ -1,0 +1,553 @@
+{
+  "artifacts": {
+    "config_summary": {
+      "path": "models/ml-1m/emerg-v1/generations/20260717T053333-s7788-a3a10db1ee40/config_summary.csv",
+      "rows": 2,
+      "sha256": "f6d284f6245d90d099ea4ec6d1c86465a9417a858e39079847a9b4b6f0d2a8a1"
+    },
+    "evaluation_metrics": {
+      "path": "models/ml-1m/emerg-v1/generations/20260717T053333-s7788-a3a10db1ee40/evaluation_metrics.csv",
+      "rows": 4,
+      "sha256": "9a72f1e2f73608ba76c1b93e897f429b36cb42973b6cfbd210c784ef008be113"
+    },
+    "evaluation_predictions": {
+      "path": "models/ml-1m/emerg-v1/generations/20260717T053333-s7788-a3a10db1ee40/evaluation_predictions.csv",
+      "rows": 230276,
+      "sha256": "ef0935f879dcbc614637685f28fc3f4c657b5b07ba64dd336835589825e813ce"
+    },
+    "feature_contract": {
+      "path": "models/ml-1m/emerg-v1/generations/20260717T053333-s7788-a3a10db1ee40/feature_contract.json",
+      "sha256": "fe7bbb6c1f89da62448ae09943b6abf78f5579aa72503d39ef0ef2a0047eeaf2"
+    },
+    "final_model_checkpoint": {
+      "path": "models/ml-1m/emerg-v1/generations/20260717T053333-s7788-a3a10db1ee40/final_model.pt",
+      "sha256": "57ffea8a2e94e0d5088cfc5ea156bd7fc6ced39fbc5205bf43668022a4d26701"
+    },
+    "graph_diagnostics": {
+      "path": "models/ml-1m/emerg-v1/generations/20260717T053333-s7788-a3a10db1ee40/graph_diagnostics.csv",
+      "rows": 4956,
+      "sha256": "df1e5d802478e97997bd71fcd394dea0f8e0bc2ad39cb9d6d78d07a6309181a6"
+    },
+    "selected_config": {
+      "path": "models/ml-1m/emerg-v1/generations/20260717T053333-s7788-a3a10db1ee40/selected_config.json",
+      "sha256": "e0a0ee8d10cdb5fe358f9ed5f9647ff0e0936dd0d33f0d77c239f6b6571aa529"
+    },
+    "training_history": {
+      "path": "models/ml-1m/emerg-v1/generations/20260717T053333-s7788-a3a10db1ee40/training_history.csv",
+      "rows": 12,
+      "sha256": "5e588b200e63d8bcad68b586e3dc1f539034e1296fc4c8ec91a898d6dd6e92ea"
+    },
+    "validation_metrics": {
+      "path": "models/ml-1m/emerg-v1/generations/20260717T053333-s7788-a3a10db1ee40/validation_metrics.csv",
+      "rows": 4,
+      "sha256": "327a3a6f8160ad21f2af09eb7a5c0eddcec747755f162abfefde3610695fe62d"
+    },
+    "validation_predictions": {
+      "path": "models/ml-1m/emerg-v1/generations/20260717T053333-s7788-a3a10db1ee40/validation_predictions.csv",
+      "rows": 611048,
+      "sha256": "a5a842a59f8695424b43b303934f753ab2c301f284d000f3374d9be97074866c"
+    },
+    "validation_thresholds": {
+      "path": "models/ml-1m/emerg-v1/generations/20260717T053333-s7788-a3a10db1ee40/validation_thresholds.csv",
+      "rows": 4,
+      "sha256": "077fea370a0cbdf2199282c3737ce098ebaceddaf2a8b3994955fafd75ea2135"
+    }
+  },
+  "bundle_id": "20260717T053333-s7788-a3a10db1ee40",
+  "bundle_manifest": "models/ml-1m/emerg-v1/generations/20260717T053333-s7788-a3a10db1ee40/manifest.json",
+  "checks": [
+    {
+      "check": "protocol schema",
+      "expected": "ml1m-coldstart-v1",
+      "observed": "ml1m-coldstart-v1",
+      "status": "PASS"
+    },
+    {
+      "check": "gradient flow",
+      "expected": "PASS",
+      "observed": "PASS",
+      "status": "PASS"
+    },
+    {
+      "check": "phase thresholds complete",
+      "expected": [
+        "Cold",
+        "Warm A",
+        "Warm B",
+        "Warm C"
+      ],
+      "observed": [
+        "Cold",
+        "Warm A",
+        "Warm B",
+        "Warm C"
+      ],
+      "status": "PASS"
+    },
+    {
+      "check": "validation predictions complete",
+      "expected": 611048,
+      "observed": 611048,
+      "status": "PASS"
+    },
+    {
+      "check": "evaluation predictions complete",
+      "expected": 230276,
+      "observed": 230276,
+      "status": "PASS"
+    },
+    {
+      "check": "evaluation phases complete",
+      "expected": [
+        "Cold",
+        "Warm A",
+        "Warm B",
+        "Warm C"
+      ],
+      "observed": [
+        "Cold",
+        "Warm A",
+        "Warm B",
+        "Warm C"
+      ],
+      "status": "PASS"
+    },
+    {
+      "check": "final train excludes evaluation items",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "feature contract has PAD/UNK",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "graph diagnostics complete",
+      "expected": [
+        "Cold",
+        "Warm A",
+        "Warm B",
+        "Warm C"
+      ],
+      "observed": [
+        "Cold",
+        "Warm A",
+        "Warm B",
+        "Warm C"
+      ],
+      "status": "PASS"
+    },
+    {
+      "check": "training values finite",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "validation values finite",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "evaluation values finite",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    }
+  ],
+  "created_at_utc": "2026-07-17T05:34:11.079597+00:00",
+  "feature_contract_sha256": "fe7bbb6c1f89da62448ae09943b6abf78f5579aa72503d39ef0ef2a0047eeaf2",
+  "model_name": "EmerG",
+  "model_schema_version": "emerg-baseline-v1",
+  "model_status": "PASS",
+  "output_schemas": {
+    "config_summary": {
+      "columns": [
+        "config_name",
+        "mean_validation_f1",
+        "mean_validation_auc",
+        "training_seconds",
+        "embedding_dim",
+        "hidden_dim",
+        "gnn_layers",
+        "learning_rate",
+        "warm_learning_rate",
+        "weight_decay",
+        "epochs",
+        "epoch_sample_rows",
+        "batch_size",
+        "warm_steps"
+      ],
+      "read_csv_dtypes": {
+        "batch_size": "int64",
+        "config_name": "string",
+        "embedding_dim": "int64",
+        "epoch_sample_rows": "int64",
+        "epochs": "int64",
+        "gnn_layers": "int64",
+        "hidden_dim": "int64",
+        "learning_rate": "float64",
+        "mean_validation_auc": "float64",
+        "mean_validation_f1": "float64",
+        "training_seconds": "float64",
+        "warm_learning_rate": "float64",
+        "warm_steps": "int64",
+        "weight_decay": "float64"
+      }
+    },
+    "evaluation_metrics": {
+      "columns": [
+        "split",
+        "phase",
+        "rows",
+        "positives",
+        "threshold",
+        "accuracy",
+        "precision",
+        "recall",
+        "f1",
+        "roc_auc",
+        "predicted_positive_rate",
+        "score_mean",
+        "score_std",
+        "tp",
+        "fp",
+        "fn",
+        "tn",
+        "config_name"
+      ],
+      "read_csv_dtypes": {
+        "accuracy": "float64",
+        "config_name": "string",
+        "f1": "float64",
+        "fn": "int64",
+        "fp": "int64",
+        "phase": "string",
+        "positives": "int64",
+        "precision": "float64",
+        "predicted_positive_rate": "float64",
+        "recall": "float64",
+        "roc_auc": "float64",
+        "rows": "int64",
+        "score_mean": "float64",
+        "score_std": "float64",
+        "split": "string",
+        "threshold": "float64",
+        "tn": "int64",
+        "tp": "int64"
+      }
+    },
+    "evaluation_predictions": {
+      "columns": [
+        "phase",
+        "source_row",
+        "user_id",
+        "user_idx",
+        "item_id",
+        "item_idx",
+        "label",
+        "score"
+      ],
+      "read_csv_dtypes": {
+        "item_id": "int64",
+        "item_idx": "int64",
+        "label": "int8",
+        "phase": "string",
+        "score": "float32",
+        "source_row": "int64",
+        "user_id": "int64",
+        "user_idx": "int64"
+      }
+    },
+    "graph_diagnostics": {
+      "columns": [
+        "split",
+        "item_id",
+        "item_idx",
+        "phase",
+        "graph_mean",
+        "graph_std",
+        "graph_density_gt_0_5",
+        "graph_diag_mean",
+        "local_delta_norm",
+        "last_warm_loss",
+        "config_name",
+        "selected_config_name",
+        "final_training_seconds",
+        "device"
+      ],
+      "read_csv_dtypes": {
+        "config_name": "string",
+        "device": "string",
+        "final_training_seconds": "float64",
+        "graph_density_gt_0_5": "float64",
+        "graph_diag_mean": "float64",
+        "graph_mean": "float64",
+        "graph_std": "float64",
+        "item_id": "int64",
+        "item_idx": "int64",
+        "last_warm_loss": "float64",
+        "local_delta_norm": "float64",
+        "phase": "string",
+        "selected_config_name": "string",
+        "split": "string"
+      }
+    },
+    "training_history": {
+      "columns": [
+        "run_name",
+        "epoch",
+        "loss",
+        "examples",
+        "config_name"
+      ],
+      "read_csv_dtypes": {
+        "config_name": "string",
+        "epoch": "int64",
+        "examples": "int64",
+        "loss": "float64",
+        "run_name": "string"
+      }
+    },
+    "validation_metrics": {
+      "columns": [
+        "split",
+        "phase",
+        "rows",
+        "positives",
+        "threshold",
+        "accuracy",
+        "precision",
+        "recall",
+        "f1",
+        "roc_auc",
+        "predicted_positive_rate",
+        "score_mean",
+        "score_std",
+        "tp",
+        "fp",
+        "fn",
+        "tn",
+        "config_name"
+      ],
+      "read_csv_dtypes": {
+        "accuracy": "float64",
+        "config_name": "string",
+        "f1": "float64",
+        "fn": "int64",
+        "fp": "int64",
+        "phase": "string",
+        "positives": "int64",
+        "precision": "float64",
+        "predicted_positive_rate": "float64",
+        "recall": "float64",
+        "roc_auc": "float64",
+        "rows": "int64",
+        "score_mean": "float64",
+        "score_std": "float64",
+        "split": "string",
+        "threshold": "float64",
+        "tn": "int64",
+        "tp": "int64"
+      }
+    },
+    "validation_predictions": {
+      "columns": [
+        "phase",
+        "source_row",
+        "user_id",
+        "user_idx",
+        "item_id",
+        "item_idx",
+        "label",
+        "score"
+      ],
+      "read_csv_dtypes": {
+        "item_id": "int64",
+        "item_idx": "int64",
+        "label": "int8",
+        "phase": "string",
+        "score": "float32",
+        "source_row": "int64",
+        "user_id": "int64",
+        "user_idx": "int64"
+      }
+    },
+    "validation_thresholds": {
+      "columns": [
+        "split",
+        "phase",
+        "threshold",
+        "validation_best_f1",
+        "config_name"
+      ],
+      "read_csv_dtypes": {
+        "config_name": "string",
+        "phase": "string",
+        "split": "string",
+        "threshold": "float64",
+        "validation_best_f1": "float64"
+      }
+    }
+  },
+  "phase_contract": {
+    "Cold": {
+      "adaptation_increment": [],
+      "graph_visible_support": []
+    },
+    "Warm A": {
+      "adaptation_increment": [
+        "warm_a"
+      ],
+      "graph_visible_support": [
+        "warm_a"
+      ]
+    },
+    "Warm B": {
+      "adaptation_increment": [
+        "warm_b"
+      ],
+      "continue_item_state_from": "Warm A",
+      "graph_visible_support": [
+        "warm_a",
+        "warm_b"
+      ]
+    },
+    "Warm C": {
+      "adaptation_increment": [
+        "warm_c"
+      ],
+      "continue_item_state_from": "Warm B",
+      "graph_visible_support": [
+        "warm_a",
+        "warm_b",
+        "warm_c"
+      ]
+    },
+    "query": "identical role=query rows in every phase"
+  },
+  "run_config": {
+    "candidate_configs": [
+      {
+        "batch_size": 4096,
+        "embedding_dim": 16,
+        "epoch_sample_rows": 262144,
+        "epochs": 4,
+        "gnn_layers": 2,
+        "hidden_dim": 64,
+        "learning_rate": 0.001,
+        "warm_learning_rate": 0.01,
+        "warm_steps": 3,
+        "weight_decay": 1e-06
+      },
+      {
+        "batch_size": 4096,
+        "embedding_dim": 32,
+        "epoch_sample_rows": 262144,
+        "epochs": 4,
+        "gnn_layers": 2,
+        "hidden_dim": 96,
+        "learning_rate": 0.001,
+        "warm_learning_rate": 0.01,
+        "warm_steps": 3,
+        "weight_decay": 1e-06
+      }
+    ],
+    "fast_dev_run": false,
+    "feature_policy": "fit categorical/text vocabularies on tuning-visible users/items; use PAD/UNK",
+    "field_order": [
+      "user_id",
+      "gender",
+      "age",
+      "occupation",
+      "zip_code",
+      "item_id",
+      "release_year",
+      "genres",
+      "title"
+    ],
+    "item_graph_fields": [
+      "item_id",
+      "release_year",
+      "genres",
+      "title"
+    ],
+    "max_genre_tokens": 6,
+    "max_title_tokens": 8,
+    "phase_order": [
+      "Cold",
+      "Warm A",
+      "Warm B",
+      "Warm C"
+    ],
+    "schema_version": "emerg-baseline-v1",
+    "seed": 7788,
+    "warmup_policy": "adapt local item embedding and graph delta sequentially: A, then B only, then C only"
+  },
+  "run_config_sha256": "b83b1719147fa8161aa3e7b81bc0038f3dc48ce17dba1a56c7d2444341785492",
+  "selected_config": {
+    "protocol_pointer_sha256": "5256c3aeda7f7e619fd60d9530397af6a207c7a83d80c45cdd131e0d86fc2ee0",
+    "run_config_sha256": "b83b1719147fa8161aa3e7b81bc0038f3dc48ce17dba1a56c7d2444341785492",
+    "schema_version": "emerg-baseline-v1",
+    "selected_config": {
+      "batch_size": 4096,
+      "embedding_dim": 32,
+      "epoch_sample_rows": 262144,
+      "epochs": 4,
+      "gnn_layers": 2,
+      "hidden_dim": 96,
+      "learning_rate": 0.001,
+      "warm_learning_rate": 0.01,
+      "warm_steps": 3,
+      "weight_decay": 1e-06
+    },
+    "selected_config_name": "cfg02_G2_D32",
+    "selected_summary": {
+      "batch_size": 4096,
+      "config_name": "cfg02_G2_D32",
+      "embedding_dim": 32,
+      "epoch_sample_rows": 262144,
+      "epochs": 4,
+      "gnn_layers": 2,
+      "hidden_dim": 96,
+      "learning_rate": 0.001,
+      "mean_validation_auc": 0.7558632878853417,
+      "mean_validation_f1": 0.789595009590964,
+      "training_seconds": 0.9830324449576437,
+      "warm_learning_rate": 0.01,
+      "warm_steps": 3,
+      "weight_decay": 1e-06
+    },
+    "threshold_by_phase": {
+      "Cold": 0.2731027901172638,
+      "Warm A": 0.3428904116153717,
+      "Warm B": 0.37989819049835205,
+      "Warm C": 0.3605548143386841
+    }
+  },
+  "summary": {
+    "evaluation_prediction_rows": 230276,
+    "final_training_seconds": 0.9942884820047766,
+    "mean_evaluation_auc": 0.7867768031994442,
+    "mean_evaluation_f1": 0.6699774152128266,
+    "mean_validation_auc": 0.7558632878853417,
+    "mean_validation_f1": 0.789595009590964,
+    "selected_config_name": "cfg02_G2_D32"
+  },
+  "training_contract": {
+    "features": "audited user/item side information only; no interaction_count/cohort/timestamp/rank features",
+    "final_refit_base": "final_train from notebook 02 after thresholds/config are frozen",
+    "thresholds": "selected on validation query rows only and frozen for evaluation",
+    "tuning_base": "tuning_train from notebook 02",
+    "warmup": "adapt local item embedding and graph delta sequentially: A, then B only, then C only"
+  },
+  "upstream_protocol": {
+    "bundle_id": "20260716T183148-e7b92de81a1e",
+    "pointer_sha256": "5256c3aeda7f7e619fd60d9530397af6a207c7a83d80c45cdd131e0d86fc2ee0",
+    "schema_version": "ml1m-coldstart-v1"
+  }
+}

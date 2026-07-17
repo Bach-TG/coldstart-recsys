@@ -1,0 +1,4 @@
+stage,seconds
+tuning_emerg_backbone,0.9718858400010504
+tuning_diffusion,0.6394552770070732
+final_diffusion,0.9685092709842138

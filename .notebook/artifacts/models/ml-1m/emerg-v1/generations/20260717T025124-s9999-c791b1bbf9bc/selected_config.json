@@ -1,0 +1,40 @@
+{
+  "protocol_pointer_sha256": "5256c3aeda7f7e619fd60d9530397af6a207c7a83d80c45cdd131e0d86fc2ee0",
+  "run_config_sha256": "b39e14ac0bf254ed824391919b967d18d619537b44f91aa5b13eae5cb88a90a6",
+  "schema_version": "emerg-baseline-v1",
+  "selected_config": {
+    "batch_size": 4096,
+    "embedding_dim": 32,
+    "epoch_sample_rows": 262144,
+    "epochs": 4,
+    "gnn_layers": 2,
+    "hidden_dim": 96,
+    "learning_rate": 0.001,
+    "warm_learning_rate": 0.01,
+    "warm_steps": 3,
+    "weight_decay": 1e-06
+  },
+  "selected_config_name": "cfg02_G2_D32",
+  "selected_summary": {
+    "batch_size": 4096,
+    "config_name": "cfg02_G2_D32",
+    "embedding_dim": 32,
+    "epoch_sample_rows": 262144,
+    "epochs": 4,
+    "gnn_layers": 2,
+    "hidden_dim": 96,
+    "learning_rate": 0.001,
+    "mean_validation_auc": 0.7557522146275,
+    "mean_validation_f1": 0.789670818929974,
+    "training_seconds": 1.2850977440248244,
+    "warm_learning_rate": 0.01,
+    "warm_steps": 3,
+    "weight_decay": 1e-06
+  },
+  "threshold_by_phase": {
+    "Cold": 0.2748320698738098,
+    "Warm A": 0.3514258563518524,
+    "Warm B": 0.3425651490688324,
+    "Warm C": 0.3725842535495758
+  }
+}

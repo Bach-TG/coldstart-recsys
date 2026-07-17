@@ -1,0 +1,660 @@
+{
+  "artifacts": {
+    "diffusion_history": {
+      "path": "models/ml-1m/emerg-gd-v2/generations/20260717T054922-s3407-778ba976a185/diffusion_history.csv",
+      "rows": 64,
+      "sha256": "6177fbafc8b619b9f6c112588177dc531f76df85aad73a0500378632a1408e8d"
+    },
+    "evaluation_metrics": {
+      "path": "models/ml-1m/emerg-gd-v2/generations/20260717T054922-s3407-778ba976a185/evaluation_metrics.csv",
+      "rows": 4,
+      "sha256": "f6201c918669ce778303f43b427b4f992e6e60d52423ef9d1f9b4fe1091891d0"
+    },
+    "evaluation_predictions": {
+      "path": "models/ml-1m/emerg-gd-v2/generations/20260717T054922-s3407-778ba976a185/evaluation_predictions.csv",
+      "rows": 230276,
+      "sha256": "6add167cc5f34d43eb823edd8bca6cdd7f02168ceca300da87ae73e8641ad40a"
+    },
+    "graph_diagnostics": {
+      "path": "models/ml-1m/emerg-gd-v2/generations/20260717T054922-s3407-778ba976a185/graph_diagnostics.csv",
+      "rows": 4956,
+      "sha256": "c08508ec89971250dc0d959d7888cf47f1d4f657de9099b8bd7e567a06147185"
+    },
+    "graph_diffusion_checkpoint": {
+      "path": "models/ml-1m/emerg-gd-v2/generations/20260717T054922-s3407-778ba976a185/graph_diffusion_v2.pt",
+      "sha256": "cd39109203afac9ec3e06c3022ff8eb285e22dc5e6ed599dfaf3b77f96d567a1"
+    },
+    "paired_seed_metrics": {
+      "path": "models/ml-1m/emerg-gd-v2/generations/20260717T054922-s3407-778ba976a185/paired_seed_metrics.csv",
+      "rows": 4,
+      "sha256": "da8611183696ccd959fef06366b0e736ca62e6a5d99999e0f30c6a8478cee371"
+    },
+    "pseudo_graph_stats": {
+      "path": "models/ml-1m/emerg-gd-v2/generations/20260717T054922-s3407-778ba976a185/pseudo_graph_stats.csv",
+      "rows": 2556,
+      "sha256": "c9b50d148e6ef2d6b2dcb497f5a2b077c627cd56ad9935f828df3f406b38bc1e"
+    },
+    "timing": {
+      "path": "models/ml-1m/emerg-gd-v2/generations/20260717T054922-s3407-778ba976a185/timing.csv",
+      "rows": 3,
+      "sha256": "cd0f6e02db6a139c0d5071081969796e8c9e711d08f54f8d25a2c71f8f139817"
+    },
+    "tuning_emerg_history": {
+      "path": "models/ml-1m/emerg-gd-v2/generations/20260717T054922-s3407-778ba976a185/tuning_emerg_history.csv",
+      "rows": 4,
+      "sha256": "eed02e90139f3d841ef4cbf773671f0aee30842c2f6359687fd12f003a3cd469"
+    },
+    "validation_metrics": {
+      "path": "models/ml-1m/emerg-gd-v2/generations/20260717T054922-s3407-778ba976a185/validation_metrics.csv",
+      "rows": 4,
+      "sha256": "1bd9227c6a0b6ad0c87f2de148b73802a98743e695295f151b681689df80f71d"
+    },
+    "validation_predictions": {
+      "path": "models/ml-1m/emerg-gd-v2/generations/20260717T054922-s3407-778ba976a185/validation_predictions.csv",
+      "rows": 611048,
+      "sha256": "2b5a6a7afc2bd3c41f0c937a87761266ca1b540eea05e5794c59aa634f923a7c"
+    },
+    "validation_thresholds": {
+      "path": "models/ml-1m/emerg-gd-v2/generations/20260717T054922-s3407-778ba976a185/validation_thresholds.csv",
+      "rows": 4,
+      "sha256": "a034d9986eae601c7dfc9d16c8a7ca7e00e708e9bf4e1d1e3f574f8f3404466d"
+    },
+    "warm_adaptation_audit": {
+      "path": "models/ml-1m/emerg-gd-v2/generations/20260717T054922-s3407-778ba976a185/warm_adaptation_audit.csv",
+      "rows": 6,
+      "sha256": "7a4e404a5e3057c96485815fd85eaf20c852467b687f23b79961c296a0ead82b"
+    }
+  },
+  "baseline_emerg": {
+    "bundle_id": "20260717T053447-s3407-179d309665a5",
+    "checkpoint_sha256": "2a00620efd257280dff7f84615737840cc8d06fc06ccc1d88645fa007105fdf3"
+  },
+  "bundle_id": "20260717T054922-s3407-778ba976a185",
+  "bundle_manifest": "models/ml-1m/emerg-gd-v2/generations/20260717T054922-s3407-778ba976a185/manifest.json",
+  "checks": [
+    {
+      "check": "diffusion gradient flow",
+      "expected": "PASS with positive finite gradient norm",
+      "observed": {
+        "gradient_norm": 2.5967965126037598,
+        "loss": 1.0587735176086426,
+        "status": "PASS"
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "exact Notebook 04 tuning seed recovered",
+      "expected": 3409,
+      "observed": 3409,
+      "status": "PASS"
+    },
+    {
+      "check": "validation predictions complete",
+      "expected": 611048,
+      "observed": 611048,
+      "status": "PASS"
+    },
+    {
+      "check": "evaluation predictions complete",
+      "expected": 230276,
+      "observed": 230276,
+      "status": "PASS"
+    },
+    {
+      "check": "phase thresholds complete",
+      "expected": [
+        "Cold",
+        "Warm A",
+        "Warm B",
+        "Warm C"
+      ],
+      "observed": [
+        "Cold",
+        "Warm A",
+        "Warm B",
+        "Warm C"
+      ],
+      "status": "PASS"
+    },
+    {
+      "check": "final train excludes evaluation items",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "warm state is non-degenerate",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "warm predictions differ from Cold",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "all numerical outputs finite",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    }
+  ],
+  "created_at_utc": "2026-07-17T05:53:47.066381+00:00",
+  "gradient_check": {
+    "gradient_norm": 2.5967965126037598,
+    "loss": 1.0587735176086426,
+    "status": "PASS"
+  },
+  "model_name": "EmerG+GD-v2",
+  "model_schema_version": "emerg-graph-diffusion-v2",
+  "model_status": "PASS",
+  "output_schemas": {
+    "diffusion_history": {
+      "columns": [
+        "run_name",
+        "epoch",
+        "loss",
+        "noise_loss",
+        "reconstruction_loss",
+        "examples"
+      ],
+      "read_csv_dtypes": {
+        "epoch": "int64",
+        "examples": "int64",
+        "loss": "float64",
+        "noise_loss": "float64",
+        "reconstruction_loss": "float64",
+        "run_name": "string"
+      }
+    },
+    "evaluation_metrics": {
+      "columns": [
+        "split",
+        "phase",
+        "rows",
+        "positives",
+        "threshold",
+        "accuracy",
+        "precision",
+        "recall",
+        "f1",
+        "roc_auc",
+        "predicted_positive_rate",
+        "score_mean",
+        "score_std",
+        "tp",
+        "fp",
+        "fn",
+        "tn"
+      ],
+      "read_csv_dtypes": {
+        "accuracy": "float64",
+        "f1": "float64",
+        "fn": "int64",
+        "fp": "int64",
+        "phase": "string",
+        "positives": "int64",
+        "precision": "float64",
+        "predicted_positive_rate": "float64",
+        "recall": "float64",
+        "roc_auc": "float64",
+        "rows": "int64",
+        "score_mean": "float64",
+        "score_std": "float64",
+        "split": "string",
+        "threshold": "float64",
+        "tn": "int64",
+        "tp": "int64"
+      }
+    },
+    "evaluation_predictions": {
+      "columns": [
+        "phase",
+        "source_row",
+        "user_id",
+        "user_idx",
+        "item_id",
+        "item_idx",
+        "label",
+        "score",
+        "graph_ensemble_score_std",
+        "graph_sample_count"
+      ],
+      "read_csv_dtypes": {
+        "graph_ensemble_score_std": "float32",
+        "graph_sample_count": "int64",
+        "item_id": "int64",
+        "item_idx": "int64",
+        "label": "int8",
+        "phase": "string",
+        "score": "float32",
+        "source_row": "int64",
+        "user_id": "int64",
+        "user_idx": "int64"
+      }
+    },
+    "graph_diagnostics": {
+      "columns": [
+        "split",
+        "item_id",
+        "item_idx",
+        "phase",
+        "graph_sample_count",
+        "graph_mean",
+        "graph_std_within",
+        "graph_between_sample_std",
+        "graph_density_gt_0_5",
+        "graph_diag_mean",
+        "graph_distance_from_cold",
+        "graph_distance_from_previous_phase",
+        "mean_absolute_score_change_from_cold",
+        "score_correlation_with_cold",
+        "support_loss_before_guidance",
+        "support_loss_after_guidance",
+        "guidance_loss_mean",
+        "guidance_loss_last",
+        "raw_guidance_gradient_norm_mean",
+        "raw_guidance_gradient_norm_max",
+        "warm_start_timestep",
+        "embedding_support_loss_before",
+        "embedding_support_loss_after",
+        "local_item_embedding_delta_norm",
+        "sampling_seconds"
+      ],
+      "read_csv_dtypes": {
+        "embedding_support_loss_after": "float64",
+        "embedding_support_loss_before": "float64",
+        "graph_between_sample_std": "float64",
+        "graph_density_gt_0_5": "float64",
+        "graph_diag_mean": "float64",
+        "graph_distance_from_cold": "float64",
+        "graph_distance_from_previous_phase": "float64",
+        "graph_mean": "float64",
+        "graph_sample_count": "int64",
+        "graph_std_within": "float64",
+        "guidance_loss_last": "float64",
+        "guidance_loss_mean": "float64",
+        "item_id": "int64",
+        "item_idx": "int64",
+        "local_item_embedding_delta_norm": "float64",
+        "mean_absolute_score_change_from_cold": "float64",
+        "phase": "string",
+        "raw_guidance_gradient_norm_max": "float64",
+        "raw_guidance_gradient_norm_mean": "float64",
+        "sampling_seconds": "float64",
+        "score_correlation_with_cold": "float64",
+        "split": "string",
+        "support_loss_after_guidance": "float64",
+        "support_loss_before_guidance": "float64",
+        "warm_start_timestep": "float64"
+      }
+    },
+    "paired_seed_metrics": {
+      "columns": [
+        "split_emerg",
+        "phase",
+        "rows_emerg",
+        "positives_emerg",
+        "threshold_emerg",
+        "accuracy_emerg",
+        "precision_emerg",
+        "recall_emerg",
+        "f1_emerg",
+        "roc_auc_emerg",
+        "predicted_positive_rate_emerg",
+        "score_mean_emerg",
+        "score_std_emerg",
+        "tp_emerg",
+        "fp_emerg",
+        "fn_emerg",
+        "tn_emerg",
+        "config_name",
+        "split_emerg_gd_v2",
+        "rows_emerg_gd_v2",
+        "positives_emerg_gd_v2",
+        "threshold_emerg_gd_v2",
+        "accuracy_emerg_gd_v2",
+        "precision_emerg_gd_v2",
+        "recall_emerg_gd_v2",
+        "f1_emerg_gd_v2",
+        "roc_auc_emerg_gd_v2",
+        "predicted_positive_rate_emerg_gd_v2",
+        "score_mean_emerg_gd_v2",
+        "score_std_emerg_gd_v2",
+        "tp_emerg_gd_v2",
+        "fp_emerg_gd_v2",
+        "fn_emerg_gd_v2",
+        "tn_emerg_gd_v2",
+        "f1_delta",
+        "roc_auc_delta",
+        "accuracy_delta",
+        "precision_delta",
+        "recall_delta"
+      ],
+      "read_csv_dtypes": {
+        "accuracy_delta": "float64",
+        "accuracy_emerg": "float64",
+        "accuracy_emerg_gd_v2": "float64",
+        "config_name": "string",
+        "f1_delta": "float64",
+        "f1_emerg": "float64",
+        "f1_emerg_gd_v2": "float64",
+        "fn_emerg": "int64",
+        "fn_emerg_gd_v2": "int64",
+        "fp_emerg": "int64",
+        "fp_emerg_gd_v2": "int64",
+        "phase": "string",
+        "positives_emerg": "int64",
+        "positives_emerg_gd_v2": "int64",
+        "precision_delta": "float64",
+        "precision_emerg": "float64",
+        "precision_emerg_gd_v2": "float64",
+        "predicted_positive_rate_emerg": "float64",
+        "predicted_positive_rate_emerg_gd_v2": "float64",
+        "recall_delta": "float64",
+        "recall_emerg": "float64",
+        "recall_emerg_gd_v2": "float64",
+        "roc_auc_delta": "float64",
+        "roc_auc_emerg": "float64",
+        "roc_auc_emerg_gd_v2": "float64",
+        "rows_emerg": "int64",
+        "rows_emerg_gd_v2": "int64",
+        "score_mean_emerg": "float64",
+        "score_mean_emerg_gd_v2": "float64",
+        "score_std_emerg": "float64",
+        "score_std_emerg_gd_v2": "float64",
+        "split_emerg": "string",
+        "split_emerg_gd_v2": "string",
+        "threshold_emerg": "float64",
+        "threshold_emerg_gd_v2": "float64",
+        "tn_emerg": "int64",
+        "tn_emerg_gd_v2": "int64",
+        "tp_emerg": "int64",
+        "tp_emerg_gd_v2": "int64"
+      }
+    },
+    "pseudo_graph_stats": {
+      "columns": [
+        "item_idx",
+        "item_id",
+        "base_edge_logit_mean",
+        "target_edge_logit_mean",
+        "residual_edge_logit_mean",
+        "residual_edge_logit_std",
+        "residual_l2_norm",
+        "base_edge_probability_mean",
+        "target_edge_probability_mean",
+        "stage"
+      ],
+      "read_csv_dtypes": {
+        "base_edge_logit_mean": "float32",
+        "base_edge_probability_mean": "float32",
+        "item_id": "int64",
+        "item_idx": "int64",
+        "residual_edge_logit_mean": "float32",
+        "residual_edge_logit_std": "float32",
+        "residual_l2_norm": "float32",
+        "stage": "string",
+        "target_edge_logit_mean": "float32",
+        "target_edge_probability_mean": "float32"
+      }
+    },
+    "timing": {
+      "columns": [
+        "stage",
+        "seconds"
+      ],
+      "read_csv_dtypes": {
+        "seconds": "float64",
+        "stage": "string"
+      }
+    },
+    "tuning_emerg_history": {
+      "columns": [
+        "run_name",
+        "epoch",
+        "loss",
+        "examples"
+      ],
+      "read_csv_dtypes": {
+        "epoch": "int64",
+        "examples": "int64",
+        "loss": "float64",
+        "run_name": "string"
+      }
+    },
+    "validation_metrics": {
+      "columns": [
+        "split",
+        "phase",
+        "rows",
+        "positives",
+        "threshold",
+        "accuracy",
+        "precision",
+        "recall",
+        "f1",
+        "roc_auc",
+        "predicted_positive_rate",
+        "score_mean",
+        "score_std",
+        "tp",
+        "fp",
+        "fn",
+        "tn"
+      ],
+      "read_csv_dtypes": {
+        "accuracy": "float64",
+        "f1": "float64",
+        "fn": "int64",
+        "fp": "int64",
+        "phase": "string",
+        "positives": "int64",
+        "precision": "float64",
+        "predicted_positive_rate": "float64",
+        "recall": "float64",
+        "roc_auc": "float64",
+        "rows": "int64",
+        "score_mean": "float64",
+        "score_std": "float64",
+        "split": "string",
+        "threshold": "float64",
+        "tn": "int64",
+        "tp": "int64"
+      }
+    },
+    "validation_predictions": {
+      "columns": [
+        "phase",
+        "source_row",
+        "user_id",
+        "user_idx",
+        "item_id",
+        "item_idx",
+        "label",
+        "score",
+        "graph_ensemble_score_std",
+        "graph_sample_count"
+      ],
+      "read_csv_dtypes": {
+        "graph_ensemble_score_std": "float32",
+        "graph_sample_count": "int64",
+        "item_id": "int64",
+        "item_idx": "int64",
+        "label": "int8",
+        "phase": "string",
+        "score": "float32",
+        "source_row": "int64",
+        "user_id": "int64",
+        "user_idx": "int64"
+      }
+    },
+    "validation_thresholds": {
+      "columns": [
+        "split",
+        "phase",
+        "threshold",
+        "validation_best_f1"
+      ],
+      "read_csv_dtypes": {
+        "phase": "string",
+        "split": "string",
+        "threshold": "float64",
+        "validation_best_f1": "float64"
+      }
+    },
+    "warm_adaptation_audit": {
+      "columns": [
+        "split",
+        "phase",
+        "items",
+        "graph_distance_from_previous_mean",
+        "graph_distance_from_cold_mean",
+        "mean_absolute_score_change_from_cold",
+        "score_correlation_with_cold_mean",
+        "local_item_embedding_delta_norm_mean",
+        "guidance_gradient_norm_mean",
+        "guidance_support_loss_improvement_mean",
+        "guidance_improved_fraction",
+        "embedding_support_loss_improvement_mean",
+        "embedding_improved_fraction"
+      ],
+      "read_csv_dtypes": {
+        "embedding_improved_fraction": "float64",
+        "embedding_support_loss_improvement_mean": "float64",
+        "graph_distance_from_cold_mean": "float64",
+        "graph_distance_from_previous_mean": "float64",
+        "guidance_gradient_norm_mean": "float64",
+        "guidance_improved_fraction": "float64",
+        "guidance_support_loss_improvement_mean": "float64",
+        "items": "int64",
+        "local_item_embedding_delta_norm_mean": "float64",
+        "mean_absolute_score_change_from_cold": "float64",
+        "phase": "string",
+        "score_correlation_with_cold_mean": "float64",
+        "split": "string"
+      }
+    }
+  },
+  "phase_contract": {
+    "Cold": {
+      "adaptation_increment": [],
+      "graph_visible_support": []
+    },
+    "Warm A": {
+      "adaptation_increment": [
+        "warm_a"
+      ],
+      "graph_visible_support": [
+        "warm_a"
+      ]
+    },
+    "Warm B": {
+      "adaptation_increment": [
+        "warm_b"
+      ],
+      "continue_item_state_from": "Warm A",
+      "graph_visible_support": [
+        "warm_a",
+        "warm_b"
+      ]
+    },
+    "Warm C": {
+      "adaptation_increment": [
+        "warm_c"
+      ],
+      "continue_item_state_from": "Warm B",
+      "graph_visible_support": [
+        "warm_a",
+        "warm_b",
+        "warm_c"
+      ]
+    },
+    "query": "identical role=query rows in every phase"
+  },
+  "run_config": {
+    "clip_normalized_x0": 6.0,
+    "condition_fields": [
+      "release_year",
+      "genres",
+      "title"
+    ],
+    "condition_includes_base_graph": true,
+    "denoiser_batch_size": 256,
+    "denoiser_epochs": 32,
+    "denoiser_hidden_dim": 192,
+    "denoiser_learning_rate": 0.001,
+    "denoiser_weight_decay": 1e-06,
+    "diffusion_timesteps": 64,
+    "edge_probability_epsilon": 0.0001,
+    "guidance_gradient_max_norm": 5.0,
+    "guidance_inner_steps": 1,
+    "guidance_min_time_weight": 0.15,
+    "guidance_prior_weight": 0.02,
+    "guidance_scale": 1.0,
+    "prediction_policy": "mean probability across persistent graph particles",
+    "pseudo_target": "edge-logit residual: trained EmerG graph minus zero-delta cold base graph",
+    "reconstruction_weight": 0.1,
+    "reproduced_tuning_backbone_seed": 3409,
+    "sampler_steps": 10,
+    "samples_per_item": 6,
+    "schema_version": "emerg-graph-diffusion-v2",
+    "seed": 3407,
+    "selected_emerg_config": {
+      "batch_size": 4096,
+      "embedding_dim": 32,
+      "epoch_sample_rows": 262144,
+      "epochs": 4,
+      "gnn_layers": 2,
+      "hidden_dim": 96,
+      "learning_rate": 0.001,
+      "warm_learning_rate": 0.01,
+      "warm_steps": 3,
+      "weight_decay": 1e-06
+    },
+    "selected_emerg_config_name": "cfg02_G2_D32",
+    "strategy": "two-stage conditional residual-edge DDPM with persistent particles, warm re-noising, CTR guidance, and local item-embedding adaptation",
+    "threshold_policy": "validation thresholds from an exactly reproduced selected EmerG tuning backbone; thresholds frozen for evaluation",
+    "time_embedding_dim": 32,
+    "warm_embedding_gradient_max_norm": 5.0,
+    "warm_embedding_learning_rate": 0.01,
+    "warm_embedding_post_steps": 2,
+    "warm_embedding_prior_weight": 0.001,
+    "warm_embedding_steps": 5,
+    "warm_embedding_weight_decay": 0.0,
+    "warm_start_timestep_ratio": 0.35,
+    "warm_support_policy": "persistent state with cumulative support: A; A+B; A+B+C"
+  },
+  "summary": {
+    "evaluation_prediction_rows": 230276,
+    "mean_evaluation_auc": 0.7864197801217724,
+    "mean_evaluation_f1": 0.674948045360314,
+    "mean_paired_f1_delta": 0.00405495800438696
+  },
+  "threshold_by_phase": {
+    "Cold": 0.29970183968544006,
+    "Warm A": 0.3318299949169159,
+    "Warm B": 0.3488636016845703,
+    "Warm C": 0.32143768668174744
+  },
+  "training_contract": {
+    "cold_sampling": "multi-particle DDIM-style reverse process sampled once per item",
+    "conditioning": [
+      "release_year",
+      "genres",
+      "title",
+      "cold_base_graph_edge_logits"
+    ],
+    "local_adaptation": "persistent item embedding updated before and after guided graph refinement",
+    "pseudo_targets": "trained EmerG edge-logit residual relative to the zero-delta cold base graph; harvested only from the active training split",
+    "thresholds": "validation thresholds from an exactly reproduced selected EmerG tuning backbone; thresholds frozen for evaluation",
+    "warm_sampling": "previous particles are re-noised at an intermediate timestep and refined with cumulative-support CTR guidance"
+  },
+  "upstream_protocol": {
+    "bundle_id": "20260716T183148-e7b92de81a1e",
+    "pointer_sha256": "5256c3aeda7f7e619fd60d9530397af6a207c7a83d80c45cdd131e0d86fc2ee0",
+    "schema_version": "ml1m-coldstart-v1"
+  }
+}

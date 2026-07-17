@@ -1,0 +1,264 @@
+{
+  "artifacts": {
+    "demo_item_context": {
+      "path": "demos/ml-1m/end-to-end-v1/generations/20260716T185752-bb324e00bf76/demo_item_context.csv",
+      "rows": 1,
+      "sha256": "ea31b391a0c2282d2054e3bb540e28efd6843082229e820676621094babb2215"
+    },
+    "demo_takeaways": {
+      "path": "demos/ml-1m/end-to-end-v1/generations/20260716T185752-bb324e00bf76/demo_takeaways.md",
+      "sha256": "6cc6d3112ddceea40a3c3a8b45f1acd28bc4b8a5850f232aaee75bf70c46c637"
+    },
+    "graph_edge_sample": {
+      "path": "demos/ml-1m/end-to-end-v1/generations/20260716T185752-bb324e00bf76/graph_edge_sample.csv",
+      "rows": 124,
+      "sha256": "235386a9dcb984de7960c0fd9105c77a1487bb6042e3789544e9eee18e00dbfa"
+    },
+    "graph_summary": {
+      "path": "demos/ml-1m/end-to-end-v1/generations/20260716T185752-bb324e00bf76/graph_summary.csv",
+      "rows": 1,
+      "sha256": "c2da7034301dbf47f6e4f2955c4587f81a1d7255da7407a242913a3100dbfb88"
+    },
+    "model_walkthrough": {
+      "path": "demos/ml-1m/end-to-end-v1/generations/20260716T185752-bb324e00bf76/model_walkthrough.csv",
+      "rows": 4,
+      "sha256": "8dadafb34422c40652b5cc351f76159c813edd26e6cb17f04004c51a050969ab"
+    },
+    "phase_walkthrough": {
+      "path": "demos/ml-1m/end-to-end-v1/generations/20260716T185752-bb324e00bf76/phase_walkthrough.csv",
+      "rows": 4,
+      "sha256": "15969b4a5f9bac08a0d0b1f87cef4e51cc015e4edb4d348efcab6705692b2a51"
+    },
+    "phase_winners": {
+      "path": "demos/ml-1m/end-to-end-v1/generations/20260716T185752-bb324e00bf76/phase_winners.csv",
+      "rows": 4,
+      "sha256": "01c9a55e7948fc3e9608aaadfa4abd87083dd788cd61e005ade9cb459f5c50c2"
+    },
+    "protocol_summary": {
+      "path": "demos/ml-1m/end-to-end-v1/generations/20260716T185752-bb324e00bf76/protocol_summary.csv",
+      "rows": 8,
+      "sha256": "b2bb1c3460b6ff11a380eac68251a2494158bf70bf74c5273992510729c7e310"
+    },
+    "pyg_graph_sample": {
+      "path": "demos/ml-1m/end-to-end-v1/generations/20260716T185752-bb324e00bf76/pyg_graph_sample.json",
+      "sha256": "79b53fe7938c8a95cca2d6bae1ae766b3e8f6f6d1f9e0820d49fce9ce455ba7c"
+    },
+    "result_snapshot": {
+      "path": "demos/ml-1m/end-to-end-v1/generations/20260716T185752-bb324e00bf76/result_snapshot.csv",
+      "rows": 16,
+      "sha256": "2f0f0a57a2af443a71b65d8d9115a6a56f50a42eb8ecf65763f6545c2a8a1af3"
+    }
+  },
+  "bundle_id": "20260716T185752-bb324e00bf76",
+  "bundle_manifest": "demos/ml-1m/end-to-end-v1/generations/20260716T185752-bb324e00bf76/manifest.json",
+  "checks": [
+    {
+      "check": "report schema",
+      "expected": "results-report-v1",
+      "observed": "results-report-v1",
+      "severity": "ERROR",
+      "status": "PASS"
+    },
+    {
+      "check": "protocol schema",
+      "expected": "ml1m-coldstart-v1",
+      "observed": "ml1m-coldstart-v1",
+      "severity": "ERROR",
+      "status": "PASS"
+    },
+    {
+      "check": "graph sample nonempty",
+      "expected": "> 0",
+      "observed": 124,
+      "severity": "ERROR",
+      "status": "PASS"
+    },
+    {
+      "check": "result snapshot nonempty",
+      "expected": "> 0",
+      "observed": 16,
+      "severity": "ERROR",
+      "status": "PASS"
+    },
+    {
+      "check": "PyG runtime available",
+      "expected": true,
+      "observed": false,
+      "severity": "WARN",
+      "status": "WARN"
+    },
+    {
+      "check": "upstream report clean",
+      "expected": "PASS",
+      "observed": "WARN",
+      "severity": "WARN",
+      "status": "WARN"
+    },
+    {
+      "check": "upstream coverage complete",
+      "expected": "COMPLETE",
+      "observed": "COMPLETE",
+      "severity": "WARN",
+      "status": "PASS"
+    }
+  ],
+  "created_at_utc": "2026-07-16T18:57:52.804365+00:00",
+  "demo_contract": {
+    "dataset": "read-only verified notebook-02 protocol artifacts",
+    "pyg": "HeteroData when torch_geometric is installed; otherwise exported PyG-compatible edge tensors",
+    "results": "read-only verified notebook-08 report artifacts",
+    "training": "none"
+  },
+  "demo_schema_version": "end-to-end-demo-v1",
+  "demo_status": "WARN",
+  "output_schemas": {
+    "demo_item_context": {
+      "columns": [
+        "demo_item_id",
+        "rows_shown",
+        "warm_a_rows",
+        "warm_b_rows",
+        "warm_c_rows",
+        "query_rows_in_preview"
+      ],
+      "read_csv_dtypes": {
+        "demo_item_id": "int64",
+        "query_rows_in_preview": "int64",
+        "rows_shown": "int64",
+        "warm_a_rows": "int64",
+        "warm_b_rows": "int64",
+        "warm_c_rows": "int64"
+      }
+    },
+    "graph_edge_sample": {
+      "columns": [
+        "user_idx",
+        "item_idx",
+        "label",
+        "edge_role"
+      ],
+      "read_csv_dtypes": {
+        "edge_role": "string",
+        "item_idx": "int64",
+        "label": "int64",
+        "user_idx": "int64"
+      }
+    },
+    "graph_summary": {
+      "columns": [
+        "graph_object_type",
+        "pyg_available",
+        "users",
+        "items",
+        "edges",
+        "positive_edges",
+        "demo_item_in_graph"
+      ],
+      "read_csv_dtypes": {
+        "demo_item_in_graph": "bool",
+        "edges": "int64",
+        "graph_object_type": "string",
+        "items": "int64",
+        "positive_edges": "int64",
+        "pyg_available": "bool",
+        "users": "int64"
+      }
+    },
+    "model_walkthrough": {
+      "columns": [
+        "model",
+        "demo_role",
+        "source",
+        "live_inference_here"
+      ],
+      "read_csv_dtypes": {
+        "demo_role": "string",
+        "live_inference_here": "bool",
+        "model": "string",
+        "source": "string"
+      }
+    },
+    "phase_walkthrough": {
+      "columns": [
+        "phase",
+        "visible_support_roles",
+        "support_rows",
+        "query_rows",
+        "graph_edges_for_demo_policy"
+      ],
+      "read_csv_dtypes": {
+        "graph_edges_for_demo_policy": "int64",
+        "phase": "string",
+        "query_rows": "int64",
+        "support_rows": "int64",
+        "visible_support_roles": "string"
+      }
+    },
+    "phase_winners": {
+      "columns": [
+        "phase",
+        "model_label",
+        "f1_mean",
+        "roc_auc_mean"
+      ],
+      "read_csv_dtypes": {
+        "f1_mean": "float64",
+        "model_label": "string",
+        "phase": "string",
+        "roc_auc_mean": "float64"
+      }
+    },
+    "protocol_summary": {
+      "columns": [
+        "quantity",
+        "value"
+      ],
+      "read_csv_dtypes": {
+        "quantity": "string",
+        "value": "int64"
+      }
+    },
+    "result_snapshot": {
+      "columns": [
+        "model_label",
+        "phase",
+        "seed_count",
+        "f1_report",
+        "roc_auc_report"
+      ],
+      "read_csv_dtypes": {
+        "f1_report": "string",
+        "model_label": "string",
+        "phase": "string",
+        "roc_auc_report": "string",
+        "seed_count": "int64"
+      }
+    }
+  },
+  "runtime": {
+    "graph_object_type": "torch tensor dict",
+    "pyg_available": false,
+    "torch_available": true,
+    "warnings": [
+      "torch_geometric is not installed; graph sample is exported as PyG-compatible tensors/dict"
+    ]
+  },
+  "summary": {
+    "demo_item_id": 4,
+    "graph_edges": 124,
+    "report_best_model": "EmerG",
+    "result_rows": 16
+  },
+  "upstream_protocol": {
+    "bundle_id": "20260716T183148-e7b92de81a1e",
+    "pointer_sha256": "5256c3aeda7f7e619fd60d9530397af6a207c7a83d80c45cdd131e0d86fc2ee0",
+    "schema_version": "ml1m-coldstart-v1"
+  },
+  "upstream_report": {
+    "bundle_id": "20260716T185729-1a15c5005e80",
+    "coverage_status": "COMPLETE",
+    "pointer_sha256": "d310703f723c2367d821fad9b41ff853942886cc9ab4227a204e2d4f9e749038",
+    "report_status": "WARN",
+    "schema_version": "results-report-v1"
+  }
+}

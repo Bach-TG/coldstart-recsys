@@ -1,0 +1,611 @@
+{
+  "artifacts": {
+    "config_summary": {
+      "path": "models/ml-1m/lightgcn-v1/generations/20260716T183408-s3407-d3c5f4a86f19/config_summary.csv",
+      "rows": 2,
+      "sha256": "f71fe8c1dd96d9fade3cab4d96f65ff974880512655654a87655e1d0aa3a88c5"
+    },
+    "diagnostics": {
+      "path": "models/ml-1m/lightgcn-v1/generations/20260716T183408-s3407-d3c5f4a86f19/diagnostics.csv",
+      "rows": 4,
+      "sha256": "96ebd23a2f88012665e37cad4e7b7937cab09f108550a5c518c3c25b81f578ce"
+    },
+    "evaluation_metrics": {
+      "path": "models/ml-1m/lightgcn-v1/generations/20260716T183408-s3407-d3c5f4a86f19/evaluation_metrics.csv",
+      "rows": 4,
+      "sha256": "66f67458866396e487e785943f6d4620f85dbbd407c79be435d4cd68678ab579"
+    },
+    "evaluation_predictions": {
+      "path": "models/ml-1m/lightgcn-v1/generations/20260716T183408-s3407-d3c5f4a86f19/evaluation_predictions.csv",
+      "rows": 230276,
+      "sha256": "e7f5e75fb9d000f984c88874d94dadcd38e92cc412157c2b4cdf2677a6cc0fab"
+    },
+    "final_model_checkpoint": {
+      "path": "models/ml-1m/lightgcn-v1/generations/20260716T183408-s3407-d3c5f4a86f19/final_model.pt",
+      "sha256": "c2a9dd73ff1e2eea3e330f01623d9f59388bb7b01cb74d34e818b611b520b2ec"
+    },
+    "selected_config": {
+      "path": "models/ml-1m/lightgcn-v1/generations/20260716T183408-s3407-d3c5f4a86f19/selected_config.json",
+      "sha256": "756c0794c3d78f4b77c5d0ccfc145f088ae1617aa2192b40bd3c12002d83a4a0"
+    },
+    "training_history": {
+      "path": "models/ml-1m/lightgcn-v1/generations/20260716T183408-s3407-d3c5f4a86f19/training_history.csv",
+      "rows": 36,
+      "sha256": "00fcdab04a4ef40c586c37d4f7f9586a9316fec94877969a076595b72cc9c096"
+    },
+    "validation_metrics": {
+      "path": "models/ml-1m/lightgcn-v1/generations/20260716T183408-s3407-d3c5f4a86f19/validation_metrics.csv",
+      "rows": 4,
+      "sha256": "7e28b13057115edc87658da42bcac3ad8e3fc285b7f5d8b0f963605223852dd6"
+    },
+    "validation_predictions": {
+      "path": "models/ml-1m/lightgcn-v1/generations/20260716T183408-s3407-d3c5f4a86f19/validation_predictions.csv",
+      "rows": 611048,
+      "sha256": "3841168ebb68c123b3c716beb428cd0f19926e8eec0d04e882603b06f244e29a"
+    },
+    "validation_thresholds": {
+      "path": "models/ml-1m/lightgcn-v1/generations/20260716T183408-s3407-d3c5f4a86f19/validation_thresholds.csv",
+      "rows": 4,
+      "sha256": "96b4686e44a3c270691166a2ebe5ad401e367b2025b00a805a651649305902ae"
+    }
+  },
+  "bundle_id": "20260716T183408-s3407-d3c5f4a86f19",
+  "bundle_manifest": "models/ml-1m/lightgcn-v1/generations/20260716T183408-s3407-d3c5f4a86f19/manifest.json",
+  "checks": [
+    {
+      "check": "protocol schema",
+      "expected": "ml1m-coldstart-v1",
+      "observed": "ml1m-coldstart-v1",
+      "status": "PASS"
+    },
+    {
+      "check": "run seed is target seed",
+      "expected": 3407,
+      "observed": 3407,
+      "status": "PASS"
+    },
+    {
+      "check": "phase thresholds complete",
+      "expected": [
+        "Cold",
+        "Warm A",
+        "Warm B",
+        "Warm C"
+      ],
+      "observed": [
+        "Cold",
+        "Warm A",
+        "Warm B",
+        "Warm C"
+      ],
+      "status": "PASS"
+    },
+    {
+      "check": "evaluation thresholds remain frozen",
+      "expected": {
+        "Cold": -0.026913650333881378,
+        "Warm A": -0.020123286172747612,
+        "Warm B": -0.01946069858968258,
+        "Warm C": -0.0187542587518692
+      },
+      "observed": {
+        "Cold": -0.026913650333881378,
+        "Warm A": -0.020123286172747612,
+        "Warm B": -0.01946069858968258,
+        "Warm C": -0.0187542587518692
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "validation predictions complete",
+      "expected": 611048,
+      "observed": 611048,
+      "status": "PASS"
+    },
+    {
+      "check": "evaluation predictions complete",
+      "expected": 230276,
+      "observed": 230276,
+      "status": "PASS"
+    },
+    {
+      "check": "evaluation phases complete",
+      "expected": [
+        "Cold",
+        "Warm A",
+        "Warm B",
+        "Warm C"
+      ],
+      "observed": [
+        "Cold",
+        "Warm A",
+        "Warm B",
+        "Warm C"
+      ],
+      "status": "PASS"
+    },
+    {
+      "check": "evaluation metrics finite",
+      "expected": "all finite",
+      "observed": "all finite",
+      "status": "PASS"
+    },
+    {
+      "check": "final train excludes evaluation items",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "Cold graph keeps evaluation items isolated",
+      "expected": 854530,
+      "observed": 854530,
+      "status": "PASS"
+    },
+    {
+      "check": "Warm graphs add cumulative support only",
+      "expected": {
+        "Cold": 854530,
+        "Warm A": 873630,
+        "Warm B": 892730,
+        "Warm C": 911830
+      },
+      "observed": {
+        "Cold": 854530,
+        "Warm A": 873630,
+        "Warm B": 892730,
+        "Warm C": 911830
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "training values finite",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "validation values finite",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "evaluation values finite",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    }
+  ],
+  "created_at_utc": "2026-07-16T18:34:09.727610+00:00",
+  "model_name": "LightGCN",
+  "model_schema_version": "lightgcn-baseline-v1",
+  "model_status": "WARN",
+  "output_schemas": {
+    "config_summary": {
+      "columns": [
+        "config_name",
+        "mean_validation_f1",
+        "mean_validation_auc",
+        "training_seconds",
+        "embedding_dim",
+        "n_layers",
+        "learning_rate",
+        "weight_decay",
+        "epochs",
+        "sample_size"
+      ],
+      "read_csv_dtypes": {
+        "config_name": "string",
+        "embedding_dim": "int64",
+        "epochs": "int64",
+        "learning_rate": "float64",
+        "mean_validation_auc": "float64",
+        "mean_validation_f1": "float64",
+        "n_layers": "int64",
+        "sample_size": "int64",
+        "training_seconds": "float64",
+        "weight_decay": "float64"
+      }
+    },
+    "diagnostics": {
+      "columns": [
+        "phase",
+        "base_train_edges",
+        "support_edges",
+        "graph_edges",
+        "query_rows",
+        "query_users",
+        "query_items",
+        "threshold",
+        "final_training_seconds",
+        "device"
+      ],
+      "read_csv_dtypes": {
+        "base_train_edges": "int64",
+        "device": "string",
+        "final_training_seconds": "float64",
+        "graph_edges": "int64",
+        "phase": "string",
+        "query_items": "int64",
+        "query_rows": "int64",
+        "query_users": "int64",
+        "support_edges": "int64",
+        "threshold": "float64"
+      }
+    },
+    "evaluation_metrics": {
+      "columns": [
+        "split",
+        "phase",
+        "rows",
+        "positives",
+        "threshold",
+        "accuracy",
+        "precision",
+        "recall",
+        "f1",
+        "roc_auc",
+        "predicted_positive_rate",
+        "score_mean",
+        "score_std",
+        "tp",
+        "fp",
+        "fn",
+        "tn",
+        "config_name"
+      ],
+      "read_csv_dtypes": {
+        "accuracy": "float64",
+        "config_name": "string",
+        "f1": "float64",
+        "fn": "int64",
+        "fp": "int64",
+        "phase": "string",
+        "positives": "int64",
+        "precision": "float64",
+        "predicted_positive_rate": "float64",
+        "recall": "float64",
+        "roc_auc": "float64",
+        "rows": "int64",
+        "score_mean": "float64",
+        "score_std": "float64",
+        "split": "string",
+        "threshold": "float64",
+        "tn": "int64",
+        "tp": "int64"
+      }
+    },
+    "evaluation_predictions": {
+      "columns": [
+        "phase",
+        "source_row",
+        "user_id",
+        "user_idx",
+        "item_id",
+        "item_idx",
+        "label",
+        "score"
+      ],
+      "read_csv_dtypes": {
+        "item_id": "int64",
+        "item_idx": "int64",
+        "label": "int8",
+        "phase": "string",
+        "score": "float32",
+        "source_row": "int64",
+        "user_id": "int64",
+        "user_idx": "int64"
+      }
+    },
+    "training_history": {
+      "columns": [
+        "run_name",
+        "epoch",
+        "loss",
+        "bpr_loss",
+        "regularizer",
+        "sample_size",
+        "config_name"
+      ],
+      "read_csv_dtypes": {
+        "bpr_loss": "float64",
+        "config_name": "string",
+        "epoch": "int64",
+        "loss": "float64",
+        "regularizer": "float64",
+        "run_name": "string",
+        "sample_size": "int64"
+      }
+    },
+    "validation_metrics": {
+      "columns": [
+        "split",
+        "phase",
+        "rows",
+        "positives",
+        "threshold",
+        "accuracy",
+        "precision",
+        "recall",
+        "f1",
+        "roc_auc",
+        "predicted_positive_rate",
+        "score_mean",
+        "score_std",
+        "tp",
+        "fp",
+        "fn",
+        "tn",
+        "config_name"
+      ],
+      "read_csv_dtypes": {
+        "accuracy": "float64",
+        "config_name": "string",
+        "f1": "float64",
+        "fn": "int64",
+        "fp": "int64",
+        "phase": "string",
+        "positives": "int64",
+        "precision": "float64",
+        "predicted_positive_rate": "float64",
+        "recall": "float64",
+        "roc_auc": "float64",
+        "rows": "int64",
+        "score_mean": "float64",
+        "score_std": "float64",
+        "split": "string",
+        "threshold": "float64",
+        "tn": "int64",
+        "tp": "int64"
+      }
+    },
+    "validation_predictions": {
+      "columns": [
+        "phase",
+        "source_row",
+        "user_id",
+        "user_idx",
+        "item_id",
+        "item_idx",
+        "label",
+        "score"
+      ],
+      "read_csv_dtypes": {
+        "item_id": "int64",
+        "item_idx": "int64",
+        "label": "int8",
+        "phase": "string",
+        "score": "float32",
+        "source_row": "int64",
+        "user_id": "int64",
+        "user_idx": "int64"
+      }
+    },
+    "validation_thresholds": {
+      "columns": [
+        "split",
+        "phase",
+        "threshold",
+        "validation_best_f1",
+        "config_name"
+      ],
+      "read_csv_dtypes": {
+        "config_name": "string",
+        "phase": "string",
+        "split": "string",
+        "threshold": "float64",
+        "validation_best_f1": "float64"
+      }
+    }
+  },
+  "phase_contract": {
+    "Cold": {
+      "adaptation_increment": [],
+      "graph_visible_support": []
+    },
+    "Warm A": {
+      "adaptation_increment": [
+        "warm_a"
+      ],
+      "graph_visible_support": [
+        "warm_a"
+      ]
+    },
+    "Warm B": {
+      "adaptation_increment": [
+        "warm_b"
+      ],
+      "continue_item_state_from": "Warm A",
+      "graph_visible_support": [
+        "warm_a",
+        "warm_b"
+      ]
+    },
+    "Warm C": {
+      "adaptation_increment": [
+        "warm_c"
+      ],
+      "continue_item_state_from": "Warm B",
+      "graph_visible_support": [
+        "warm_a",
+        "warm_b",
+        "warm_c"
+      ]
+    },
+    "query": "identical role=query rows in every phase"
+  },
+  "quality_checks": [
+    {
+      "check": "predicted positive rate is below suspicious saturation",
+      "expected": "< 0.98",
+      "metric": "predicted_positive_rate",
+      "observed": 0.9999826295402039,
+      "phase": "Cold",
+      "severity": "WARN",
+      "split": "evaluation",
+      "status": "WARN"
+    },
+    {
+      "check": "ROC-AUC is outside near-random interval",
+      "expected": "outside inclusive interval [0.45, 0.55]",
+      "metric": "roc_auc",
+      "observed": 0.5015929601760593,
+      "phase": "Cold",
+      "severity": "WARN",
+      "split": "evaluation",
+      "status": "WARN"
+    },
+    {
+      "check": "predicted positive rate is below suspicious saturation",
+      "expected": "< 0.98",
+      "metric": "predicted_positive_rate",
+      "observed": 0.9999478886206118,
+      "phase": "Warm A",
+      "severity": "WARN",
+      "split": "evaluation",
+      "status": "WARN"
+    },
+    {
+      "check": "ROC-AUC is outside near-random interval",
+      "expected": "outside inclusive interval [0.45, 0.55]",
+      "metric": "roc_auc",
+      "observed": 0.4922198931956845,
+      "phase": "Warm A",
+      "severity": "WARN",
+      "split": "evaluation",
+      "status": "WARN"
+    },
+    {
+      "check": "predicted positive rate is below suspicious saturation",
+      "expected": "< 0.98",
+      "metric": "predicted_positive_rate",
+      "observed": 1.0,
+      "phase": "Warm B",
+      "severity": "WARN",
+      "split": "evaluation",
+      "status": "WARN"
+    },
+    {
+      "check": "ROC-AUC is outside near-random interval",
+      "expected": "outside inclusive interval [0.45, 0.55]",
+      "metric": "roc_auc",
+      "observed": 0.4891876614165297,
+      "phase": "Warm B",
+      "severity": "WARN",
+      "split": "evaluation",
+      "status": "WARN"
+    },
+    {
+      "check": "predicted positive rate is below suspicious saturation",
+      "expected": "< 0.98",
+      "metric": "predicted_positive_rate",
+      "observed": 1.0,
+      "phase": "Warm C",
+      "severity": "WARN",
+      "split": "evaluation",
+      "status": "WARN"
+    },
+    {
+      "check": "ROC-AUC is outside near-random interval",
+      "expected": "outside inclusive interval [0.45, 0.55]",
+      "metric": "roc_auc",
+      "observed": 0.48829181358746176,
+      "phase": "Warm C",
+      "severity": "WARN",
+      "split": "evaluation",
+      "status": "WARN"
+    }
+  ],
+  "quality_status": "WARN",
+  "run_config": {
+    "candidate_configs": [
+      {
+        "embedding_dim": 64,
+        "epochs": 12,
+        "learning_rate": 0.003,
+        "n_layers": 2,
+        "sample_size": 65536,
+        "weight_decay": 0.0001
+      },
+      {
+        "embedding_dim": 64,
+        "epochs": 12,
+        "learning_rate": 0.003,
+        "n_layers": 3,
+        "sample_size": 65536,
+        "weight_decay": 0.0001
+      }
+    ],
+    "evaluation_thresholds": "frozen per-phase validation thresholds",
+    "fast_dev_run": false,
+    "negative_item_pool": "items visible in the current training base only",
+    "phase_order": [
+      "Cold",
+      "Warm A",
+      "Warm B",
+      "Warm C"
+    ],
+    "schema_version": "lightgcn-baseline-v1",
+    "scoring_batch_size": 131072,
+    "seed": 3407,
+    "selection_labels": "validation query labels only",
+    "training_feedback": "all visible interactions are implicit LightGCN edges/BPR positives"
+  },
+  "run_config_sha256": "4f56ea8b8660f4d38956b3bc570878d7de875e4ffa30f591f6614eaad89494ea",
+  "selected_config": {
+    "protocol_pointer_sha256": "5256c3aeda7f7e619fd60d9530397af6a207c7a83d80c45cdd131e0d86fc2ee0",
+    "run_config_sha256": "4f56ea8b8660f4d38956b3bc570878d7de875e4ffa30f591f6614eaad89494ea",
+    "schema_version": "lightgcn-baseline-v1",
+    "selected_config": {
+      "embedding_dim": 64,
+      "epochs": 12,
+      "learning_rate": 0.003,
+      "n_layers": 3,
+      "sample_size": 65536,
+      "weight_decay": 0.0001
+    },
+    "selected_config_name": "cfg02_L3_D64",
+    "selected_summary": {
+      "config_name": "cfg02_L3_D64",
+      "embedding_dim": 64,
+      "epochs": 12,
+      "learning_rate": 0.003,
+      "mean_validation_auc": 0.5033091999742108,
+      "mean_validation_f1": 0.7593781470314975,
+      "n_layers": 3,
+      "sample_size": 65536,
+      "training_seconds": 2.492941320000682,
+      "weight_decay": 0.0001
+    },
+    "threshold_by_phase": {
+      "Cold": -0.026913650333881378,
+      "Warm A": -0.020123286172747612,
+      "Warm B": -0.01946069858968258,
+      "Warm C": -0.0187542587518692
+    }
+  },
+  "summary": {
+    "evaluation_prediction_rows": 230276,
+    "final_training_seconds": 2.5915889120078646,
+    "mean_evaluation_auc": 0.4928230820939338,
+    "mean_evaluation_f1": 0.5797592171325807,
+    "mean_validation_auc": 0.5033091999742108,
+    "mean_validation_f1": 0.7593781470314975,
+    "quality_warning_count": 8,
+    "selected_config_name": "cfg02_L3_D64"
+  },
+  "training_contract": {
+    "features": "ID embeddings only; no side information",
+    "final_refit_base": "final_train from notebook 02",
+    "graph_support": "Cold none; Warm A/B/C cumulative support rows",
+    "quality_diagnostics": "evaluation labels are diagnostic only; never used for selection",
+    "thresholds": "selected on validation query rows only and frozen for evaluation",
+    "tuning_base": "tuning_train from notebook 02"
+  },
+  "upstream_protocol": {
+    "bundle_id": "20260716T183148-e7b92de81a1e",
+    "pointer_sha256": "5256c3aeda7f7e619fd60d9530397af6a207c7a83d80c45cdd131e0d86fc2ee0",
+    "schema_version": "ml1m-coldstart-v1"
+  }
+}

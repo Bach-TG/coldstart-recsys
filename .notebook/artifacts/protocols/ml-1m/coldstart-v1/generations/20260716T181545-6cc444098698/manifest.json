@@ -1,0 +1,515 @@
+{
+  "artifacts": {
+    "evaluation_tasks": {
+      "path": "protocols/ml-1m/coldstart-v1/generations/20260716T181545-6cc444098698/evaluation_tasks.csv",
+      "rows": 114869,
+      "sha256": "e6502dd301d225086083c76ed17382d8134800a7bf32a2069dff5e011e4d8013"
+    },
+    "final_train": {
+      "path": "protocols/ml-1m/coldstart-v1/generations/20260716T181545-6cc444098698/final_train.csv",
+      "rows": 854530,
+      "sha256": "2f1660bd7147e11bd8efb6fb9a40511cea89d3c654a4ec9cea71f8a431cf0050"
+    },
+    "item_cohorts": {
+      "path": "protocols/ml-1m/coldstart-v1/generations/20260716T181545-6cc444098698/item_cohorts.csv",
+      "rows": 3883,
+      "sha256": "cf812a0ff9c66884532c27e74d132c8e14a756b7589a2347ad206f875bc64341"
+    },
+    "items": {
+      "path": "protocols/ml-1m/coldstart-v1/generations/20260716T181545-6cc444098698/items.csv",
+      "rows": 2375,
+      "sha256": "b0c1c70df8a43e7165e37da4768fe2416bc3b1fb3b092a90bdd65976f9752341"
+    },
+    "tuning_train": {
+      "path": "protocols/ml-1m/coldstart-v1/generations/20260716T181545-6cc444098698/tuning_train.csv",
+      "rows": 684728,
+      "sha256": "0f86ff6dba568fb4e4e7118c4db0c5918e822e8fd77d20dc3a9b08b36e0d6965"
+    },
+    "users": {
+      "path": "protocols/ml-1m/coldstart-v1/generations/20260716T181545-6cc444098698/users.csv",
+      "rows": 6040,
+      "sha256": "86f98b7c23a87cf77674e9b4a67878773c0e2c25a760f32c3bc628a424a316f5"
+    },
+    "validation_tasks": {
+      "path": "protocols/ml-1m/coldstart-v1/generations/20260716T181545-6cc444098698/validation_tasks.csv",
+      "rows": 169802,
+      "sha256": "78617869091885038dec1009c53afa9ae66e4dc18d7d8a4e2cfd70bba14b3840"
+    }
+  },
+  "bundle_id": "20260716T181545-6cc444098698",
+  "bundle_manifest": "protocols/ml-1m/coldstart-v1/generations/20260716T181545-6cc444098698/manifest.json",
+  "checks": [
+    {
+      "check": "old item count",
+      "expected": 1420,
+      "observed": 1420,
+      "status": "PASS"
+    },
+    {
+      "check": "new item count",
+      "expected": 955,
+      "observed": 955,
+      "status": "PASS"
+    },
+    {
+      "check": "old validation item count",
+      "expected": 284,
+      "observed": 284,
+      "status": "PASS"
+    },
+    {
+      "check": "old tuning item count",
+      "expected": 1136,
+      "observed": 1136,
+      "status": "PASS"
+    },
+    {
+      "check": "excluded rated item count",
+      "expected": 1331,
+      "observed": 1331,
+      "status": "PASS"
+    },
+    {
+      "check": "unrated item count",
+      "expected": 177,
+      "observed": 177,
+      "status": "PASS"
+    },
+    {
+      "check": "item cohorts disjoint",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "tuning rows",
+      "expected": 684728,
+      "observed": 684728,
+      "status": "PASS"
+    },
+    {
+      "check": "final old-item rows",
+      "expected": 854530,
+      "observed": 854530,
+      "status": "PASS"
+    },
+    {
+      "check": "evaluation rows",
+      "expected": 114869,
+      "observed": 114869,
+      "status": "PASS"
+    },
+    {
+      "check": "evaluation query rows",
+      "expected": 57569,
+      "observed": 57569,
+      "status": "PASS"
+    },
+    {
+      "check": "evaluation query positives",
+      "expected": 23501,
+      "observed": 23501,
+      "status": "PASS"
+    },
+    {
+      "check": "validation warm blocks",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "evaluation warm blocks",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "validation task partition",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "evaluation task partition",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "new items absent from final training",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "validation items absent from tuning",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "task rows absent from tuning",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "label rule in every split",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "validation query has both labels",
+      "expected": 2,
+      "observed": 2,
+      "status": "PASS"
+    },
+    {
+      "check": "evaluation query has both labels",
+      "expected": 2,
+      "observed": 2,
+      "status": "PASS"
+    },
+    {
+      "check": "evaluation users visible in tuning",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "validation users visible in tuning",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "shared indices bijective and consistent",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    }
+  ],
+  "cohort_summary": [
+    {
+      "cohort": "excluded_rated",
+      "interactions": 30810,
+      "items": 1331
+    },
+    {
+      "cohort": "new",
+      "interactions": 114869,
+      "items": 955
+    },
+    {
+      "cohort": "old_train",
+      "interactions": 684728,
+      "items": 1136
+    },
+    {
+      "cohort": "old_validation",
+      "interactions": 169802,
+      "items": 284
+    },
+    {
+      "cohort": "unrated",
+      "interactions": 0,
+      "items": 177
+    }
+  ],
+  "configuration": {
+    "candidate_policy": "observed labeled query rows; no synthetic negatives",
+    "graph_edge_policy": "all phase-visible interactions, independent of label",
+    "old_item_threshold": 200,
+    "positive_rating_min": 4,
+    "protocol_seed": 2025,
+    "schema_version": "ml1m-coldstart-v1",
+    "validation_fraction": 0.2,
+    "validation_policy": "20% old items by seeded SHA-256 rank; mirror A/B/C/query",
+    "warm_block_size": 20
+  },
+  "configuration_sha256": "7851d74536c20d1b9799ed275aa7f2122559c9a785472d4a2bfcd9257b1c8474",
+  "created_at_utc": "2026-07-16T18:15:46.813525+00:00",
+  "feature_contract": {
+    "administrative_only": [
+      "source_row",
+      "timestamp",
+      "rating",
+      "label",
+      "item_rank",
+      "role",
+      "interaction_count",
+      "cohort",
+      "user_idx",
+      "item_idx"
+    ],
+    "allowed_item_features": [
+      "item_id",
+      "title",
+      "genres",
+      "release_year"
+    ],
+    "allowed_user_features": [
+      "user_id",
+      "gender",
+      "age",
+      "occupation",
+      "zip_code"
+    ],
+    "rule": "administrative fields must not be predictive model features"
+  },
+  "output_schemas": {
+    "evaluation_tasks": {
+      "columns": [
+        "source_row",
+        "user_id",
+        "user_idx",
+        "item_id",
+        "item_idx",
+        "rating",
+        "timestamp",
+        "label",
+        "item_rank",
+        "role"
+      ],
+      "read_csv_dtypes": {
+        "item_id": "int64",
+        "item_idx": "int64",
+        "item_rank": "int64",
+        "label": "int8",
+        "rating": "int64",
+        "role": "string",
+        "source_row": "int64",
+        "timestamp": "int64",
+        "user_id": "int64",
+        "user_idx": "int64"
+      }
+    },
+    "final_train": {
+      "columns": [
+        "source_row",
+        "user_id",
+        "user_idx",
+        "item_id",
+        "item_idx",
+        "rating",
+        "timestamp",
+        "label"
+      ],
+      "read_csv_dtypes": {
+        "item_id": "int64",
+        "item_idx": "int64",
+        "label": "int8",
+        "rating": "int64",
+        "source_row": "int64",
+        "timestamp": "int64",
+        "user_id": "int64",
+        "user_idx": "int64"
+      }
+    },
+    "item_cohorts": {
+      "columns": [
+        "item_id",
+        "interaction_count",
+        "cohort",
+        "item_idx"
+      ],
+      "read_csv_dtypes": {
+        "cohort": "string",
+        "interaction_count": "int64",
+        "item_id": "int64",
+        "item_idx": "Int64"
+      }
+    },
+    "items": {
+      "columns": [
+        "item_id",
+        "title",
+        "genres",
+        "release_year",
+        "release_year_parse_status",
+        "item_idx"
+      ],
+      "read_csv_dtypes": {
+        "genres": "string",
+        "item_id": "int64",
+        "item_idx": "int64",
+        "release_year": "Int64",
+        "release_year_parse_status": "string",
+        "title": "string"
+      }
+    },
+    "tuning_train": {
+      "columns": [
+        "source_row",
+        "user_id",
+        "user_idx",
+        "item_id",
+        "item_idx",
+        "rating",
+        "timestamp",
+        "label"
+      ],
+      "read_csv_dtypes": {
+        "item_id": "int64",
+        "item_idx": "int64",
+        "label": "int8",
+        "rating": "int64",
+        "source_row": "int64",
+        "timestamp": "int64",
+        "user_id": "int64",
+        "user_idx": "int64"
+      }
+    },
+    "users": {
+      "columns": [
+        "user_id",
+        "gender",
+        "age",
+        "occupation",
+        "zip_code",
+        "user_idx"
+      ],
+      "read_csv_dtypes": {
+        "age": "int64",
+        "gender": "string",
+        "occupation": "int64",
+        "user_id": "int64",
+        "user_idx": "int64",
+        "zip_code": "string"
+      }
+    },
+    "validation_tasks": {
+      "columns": [
+        "source_row",
+        "user_id",
+        "user_idx",
+        "item_id",
+        "item_idx",
+        "rating",
+        "timestamp",
+        "label",
+        "item_rank",
+        "role"
+      ],
+      "read_csv_dtypes": {
+        "item_id": "int64",
+        "item_idx": "int64",
+        "item_rank": "int64",
+        "label": "int8",
+        "rating": "int64",
+        "role": "string",
+        "source_row": "int64",
+        "timestamp": "int64",
+        "user_id": "int64",
+        "user_idx": "int64"
+      }
+    }
+  },
+  "path_contract": {
+    "artifact_paths": "relative to COLDSTART_PROTOCOL_ROOT when consumed downstream",
+    "pointer_from_protocol_root": "protocols/ml-1m/coldstart-v1/manifest.json"
+  },
+  "phase_contract": {
+    "Cold": {
+      "adaptation_increment": [],
+      "graph_visible_support": []
+    },
+    "Warm A": {
+      "adaptation_increment": [
+        "warm_a"
+      ],
+      "graph_visible_support": [
+        "warm_a"
+      ]
+    },
+    "Warm B": {
+      "adaptation_increment": [
+        "warm_b"
+      ],
+      "continue_item_state_from": "Warm A",
+      "graph_visible_support": [
+        "warm_a",
+        "warm_b"
+      ]
+    },
+    "Warm C": {
+      "adaptation_increment": [
+        "warm_c"
+      ],
+      "continue_item_state_from": "Warm B",
+      "graph_visible_support": [
+        "warm_a",
+        "warm_b",
+        "warm_c"
+      ]
+    },
+    "query": "identical role=query rows in every phase"
+  },
+  "protocol_schema_version": "ml1m-coldstart-v1",
+  "protocol_status": "PASS",
+  "summary": {
+    "evaluation_query_positives": 23501,
+    "evaluation_query_rows": 57569,
+    "evaluation_task_rows": 114869,
+    "final_train_rows": 854530,
+    "protocol_items": 2375,
+    "tuning_train_rows": 684728,
+    "users": 6040,
+    "validation_task_rows": 169802
+  },
+  "task_summary": [
+    {
+      "role": "query",
+      "rows": 152762,
+      "split": "validation"
+    },
+    {
+      "role": "warm_a",
+      "rows": 5680,
+      "split": "validation"
+    },
+    {
+      "role": "warm_b",
+      "rows": 5680,
+      "split": "validation"
+    },
+    {
+      "role": "warm_c",
+      "rows": 5680,
+      "split": "validation"
+    },
+    {
+      "role": "query",
+      "rows": 57569,
+      "split": "evaluation"
+    },
+    {
+      "role": "warm_a",
+      "rows": 19100,
+      "split": "evaluation"
+    },
+    {
+      "role": "warm_b",
+      "rows": 19100,
+      "split": "evaluation"
+    },
+    {
+      "role": "warm_c",
+      "rows": 19100,
+      "split": "evaluation"
+    }
+  ],
+  "training_contract": {
+    "candidate_policy": "observed labeled query rows; no synthetic negatives",
+    "f1_thresholds": "select per model and phase on validation query rows only",
+    "final_refit": "final_train after all choices and thresholds are frozen",
+    "graph_edge_policy": "all phase-visible interactions, independent of label",
+    "tuning": "tuning_train; validation items excluded"
+  },
+  "upstream_audit": {
+    "bundle_id": "20260716T181530-11934993c768",
+    "pointer_sha256": "014f7dcf2110d6190a5bcdcc84a171923df6197ea1efb94a42ce2149b1b1ab84",
+    "schema_version": "ml1m-audit-v2"
+  }
+}

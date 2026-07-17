@@ -1,0 +1,593 @@
+{
+  "artifacts": {
+    "audit_checks": {
+      "path": "processed/ml-1m/audit-v2/generations/20260716T183141-6d7452c9cb5b/audit_checks.csv",
+      "rows": 32,
+      "sha256": "1fc1bd3dcc753ab884e9c5168051142fcfb533c999babf15abff7f430797f27e"
+    },
+    "audit_summary_json": {
+      "path": "processed/ml-1m/audit-v2/generations/20260716T183141-6d7452c9cb5b/audit_summary.json",
+      "sha256": "4ae8ba800e8f797e3b64dc8a902c0c6ca7c8a6f401cc0508aae6a5a3d17c3878"
+    },
+    "audit_summary_markdown": {
+      "path": "processed/ml-1m/audit-v2/generations/20260716T183141-6d7452c9cb5b/audit_summary.md",
+      "sha256": "39063dbbe5691a8f748724a55881c87b6b0eb316ae712c1d7f6c2844bc116656"
+    },
+    "feature_inventory": {
+      "path": "processed/ml-1m/audit-v2/generations/20260716T183141-6d7452c9cb5b/feature_inventory.csv",
+      "rows": 11,
+      "sha256": "d8b0352d55390cc9499de4820e2d9141f19965ee773228eaf75968f4d08ee678"
+    },
+    "interactions": {
+      "path": "processed/ml-1m/audit-v2/generations/20260716T183141-6d7452c9cb5b/interactions.csv",
+      "rows": 1000209,
+      "sha256": "811754e8ae0641901dd5d290bdd8b2c9bef2d973b2263cc145f8b460a67110a2"
+    },
+    "items": {
+      "path": "processed/ml-1m/audit-v2/generations/20260716T183141-6d7452c9cb5b/items.csv",
+      "rows": 3883,
+      "sha256": "ace7127d1cb0784df589ebecb683464e9705db5fdc8507d135b693dd97176e9a"
+    },
+    "source_inventory": {
+      "path": "processed/ml-1m/audit-v2/generations/20260716T183141-6d7452c9cb5b/source_inventory.csv",
+      "rows": 4,
+      "sha256": "4122224d349d191d153278899cb1c538853c7947a90f53a35a63f096c312253c"
+    },
+    "users": {
+      "path": "processed/ml-1m/audit-v2/generations/20260716T183141-6d7452c9cb5b/users.csv",
+      "rows": 6040,
+      "sha256": "3ef2383e290fcf8b6f469d23829ca228b530434093e8d785d1d23c87fd3cb96f"
+    }
+  },
+  "audit_schema_version": "ml1m-audit-v2",
+  "audit_status": "PASS",
+  "bundle_id": "20260716T183141-6d7452c9cb5b",
+  "bundle_manifest": "processed/ml-1m/audit-v2/generations/20260716T183141-6d7452c9cb5b/manifest.json",
+  "canonical_item_derived_columns": {
+    "release_year": "four trailing digits in the documented title",
+    "release_year_parse_status": "parsed or missing"
+  },
+  "canonical_output_schemas": {
+    "interactions": {
+      "columns": [
+        "user_id",
+        "item_id",
+        "rating",
+        "timestamp"
+      ],
+      "read_csv_dtypes": {
+        "item_id": "int64",
+        "rating": "int64",
+        "timestamp": "int64",
+        "user_id": "int64"
+      }
+    },
+    "items": {
+      "columns": [
+        "item_id",
+        "title",
+        "genres",
+        "release_year",
+        "release_year_parse_status"
+      ],
+      "read_csv_dtypes": {
+        "genres": "string",
+        "item_id": "int64",
+        "release_year": "Int64",
+        "release_year_parse_status": "string",
+        "title": "string"
+      }
+    },
+    "users": {
+      "columns": [
+        "user_id",
+        "gender",
+        "age",
+        "occupation",
+        "zip_code"
+      ],
+      "read_csv_dtypes": {
+        "age": "int64",
+        "gender": "string",
+        "occupation": "int64",
+        "user_id": "int64",
+        "zip_code": "string"
+      }
+    }
+  },
+  "checks": [
+    {
+      "category": "environment",
+      "check": "required dependencies",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "category": "source",
+      "check": "MovieLens-1M source found",
+      "expected": "official source",
+      "observed": {
+        "kind": "zip",
+        "name": "ml-1m.zip",
+        "origin": "input root"
+      },
+      "status": "PASS"
+    },
+    {
+      "category": "source",
+      "check": "required source members",
+      "expected": [
+        "ratings.dat",
+        "users.dat",
+        "movies.dat",
+        "README"
+      ],
+      "observed": [
+        "ratings.dat",
+        "users.dat",
+        "movies.dat",
+        "README"
+      ],
+      "status": "PASS"
+    },
+    {
+      "category": "source",
+      "check": "README schema authority",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "category": "source",
+      "check": "official archive identity",
+      "expected": "trusted archive or exact trusted member fingerprints",
+      "observed": {
+        "archive_md5": "c4d9eecfca2ab87c1945afe126590906",
+        "members_valid": true
+      },
+      "status": "PASS"
+    },
+    {
+      "category": "parsing",
+      "check": "all canonical tables parsed",
+      "expected": "no error",
+      "observed": null,
+      "status": "PASS"
+    },
+    {
+      "category": "release fingerprint",
+      "check": "ratings row count",
+      "expected": 1000209,
+      "observed": 1000209,
+      "status": "PASS"
+    },
+    {
+      "category": "missingness",
+      "check": "ratings missing values",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "category": "release fingerprint",
+      "check": "users row count",
+      "expected": 6040,
+      "observed": 6040,
+      "status": "PASS"
+    },
+    {
+      "category": "missingness",
+      "check": "users missing values",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "category": "release fingerprint",
+      "check": "items row count",
+      "expected": 3883,
+      "observed": 3883,
+      "status": "PASS"
+    },
+    {
+      "category": "missingness",
+      "check": "items missing values",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "category": "keys",
+      "check": "unique user primary key",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "category": "keys",
+      "check": "unique item primary key",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "category": "keys",
+      "check": "unique user-item ratings",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "category": "ranges",
+      "check": "user ID range",
+      "expected": [
+        1,
+        6040
+      ],
+      "observed": [
+        1,
+        6040
+      ],
+      "status": "PASS"
+    },
+    {
+      "category": "ranges",
+      "check": "item ID range",
+      "expected": [
+        1,
+        3952
+      ],
+      "observed": [
+        1,
+        3952
+      ],
+      "status": "PASS"
+    },
+    {
+      "category": "ranges",
+      "check": "whole-star rating values",
+      "expected": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "observed": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "status": "PASS"
+    },
+    {
+      "category": "ranges",
+      "check": "nonnegative Unix timestamps",
+      "expected": ">= 0",
+      "observed": 956703932,
+      "status": "PASS"
+    },
+    {
+      "category": "ranges",
+      "check": "timestamps parse as UTC",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "category": "ranges",
+      "check": "documented gender codes",
+      "expected": [
+        "F",
+        "M"
+      ],
+      "observed": [
+        "F",
+        "M"
+      ],
+      "status": "PASS"
+    },
+    {
+      "category": "ranges",
+      "check": "documented age codes",
+      "expected": [
+        1,
+        18,
+        25,
+        35,
+        45,
+        50,
+        56
+      ],
+      "observed": [
+        1,
+        18,
+        25,
+        35,
+        45,
+        50,
+        56
+      ],
+      "status": "PASS"
+    },
+    {
+      "category": "ranges",
+      "check": "documented occupation codes",
+      "expected": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "observed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "status": "PASS"
+    },
+    {
+      "category": "ranges",
+      "check": "documented genre values",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "category": "references",
+      "check": "all rated users have metadata",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "category": "references",
+      "check": "all rated items have metadata",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "category": "coverage",
+      "check": "every metadata user has ratings",
+      "expected": 6040,
+      "observed": 6040,
+      "status": "PASS"
+    },
+    {
+      "category": "coverage",
+      "check": "at least 20 ratings per user",
+      "expected": ">= 20",
+      "observed": 20,
+      "status": "PASS"
+    },
+    {
+      "category": "content",
+      "check": "nonempty titles",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "category": "content",
+      "check": "nonempty genres",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "category": "content",
+      "check": "nonempty ZIP codes",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "category": "derived",
+      "check": "release year parsed",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    }
+  ],
+  "created_at_utc": "2026-07-16T18:31:41.654778+00:00",
+  "dataset": "MovieLens-1M",
+  "deferred_to_notebook_02": [
+    "binary label",
+    "item-frequency cohorts",
+    "train-validation-test split",
+    "Cold and Warm-Up A/B/C phases",
+    "candidate policy",
+    "contiguous ID mappings",
+    "feature encoders and vocabularies"
+  ],
+  "distribution_policy": "private research artifact; respect GroupLens no-redistribution terms",
+  "downstream_notebook": "02_cold_start_protocol.ipynb",
+  "official_sources": {
+    "archive_md5": "c4d9eecfca2ab87c1945afe126590906",
+    "archive_url": "https://files.grouplens.org/datasets/movielens/ml-1m.zip",
+    "readme_url": "https://files.grouplens.org/datasets/movielens/ml-1m-README.txt",
+    "trusted_archive_sha256": "a6898adb50b9ca05aa231689da44c217cb524e7ebd39d264c56e2832f2c54e20",
+    "trusted_member_fingerprints": {
+      "README": {
+        "sha256": "2d5ddce86ccbd247207456165827b4b9ddf27282bca93807d4c763e28414f133",
+        "size_bytes": 5577
+      },
+      "movies.dat": {
+        "sha256": "0140fc2356357c1a851d0f52e893a1e4d3696df632c4141cea8d5bc3d621f0b9",
+        "size_bytes": 171308
+      },
+      "ratings.dat": {
+        "sha256": "506d64ca44484487c11dc2d9a28de5c54948213e6b96285e298afe28d6ea4e0f",
+        "size_bytes": 24594131
+      },
+      "users.dat": {
+        "sha256": "1dc3a95300cb19f7c10e027daf29b8cdf1d908dab65b5edfb45950aa389a10a3",
+        "size_bytes": 134368
+      }
+    }
+  },
+  "parser": {
+    "pandas": "3.0.3",
+    "python": "3.12.3"
+  },
+  "path_contract": {
+    "artifact_paths": "relative to COLDSTART_AUDIT_ROOT when consumed downstream",
+    "downstream_outputs": "keep COLDSTART_ARTIFACT_ROOT on writable local or Kaggle working storage",
+    "kaggle_downstream_input": "set COLDSTART_AUDIT_ROOT to the mounted notebook-01 output",
+    "local_audit_root": "COLDSTART_ARTIFACT_ROOT",
+    "manifest_path_from_audit_root": "processed/ml-1m/audit-v2/manifest.json"
+  },
+  "release": "ml-1m",
+  "source": {
+    "archive_md5": "c4d9eecfca2ab87c1945afe126590906",
+    "archive_sha256": "a6898adb50b9ca05aa231689da44c217cb524e7ebd39d264c56e2832f2c54e20",
+    "kind": "zip",
+    "members": [
+      {
+        "expected_sha256": "506d64ca44484487c11dc2d9a28de5c54948213e6b96285e298afe28d6ea4e0f",
+        "expected_size_bytes": 24594131,
+        "logical_name": "ratings.dat",
+        "matches_trusted_fingerprint": true,
+        "sha256": "506d64ca44484487c11dc2d9a28de5c54948213e6b96285e298afe28d6ea4e0f",
+        "size_bytes": 24594131,
+        "source_member": "ml-1m/ratings.dat"
+      },
+      {
+        "expected_sha256": "1dc3a95300cb19f7c10e027daf29b8cdf1d908dab65b5edfb45950aa389a10a3",
+        "expected_size_bytes": 134368,
+        "logical_name": "users.dat",
+        "matches_trusted_fingerprint": true,
+        "sha256": "1dc3a95300cb19f7c10e027daf29b8cdf1d908dab65b5edfb45950aa389a10a3",
+        "size_bytes": 134368,
+        "source_member": "ml-1m/users.dat"
+      },
+      {
+        "expected_sha256": "0140fc2356357c1a851d0f52e893a1e4d3696df632c4141cea8d5bc3d621f0b9",
+        "expected_size_bytes": 171308,
+        "logical_name": "movies.dat",
+        "matches_trusted_fingerprint": true,
+        "sha256": "0140fc2356357c1a851d0f52e893a1e4d3696df632c4141cea8d5bc3d621f0b9",
+        "size_bytes": 171308,
+        "source_member": "ml-1m/movies.dat"
+      },
+      {
+        "expected_sha256": "2d5ddce86ccbd247207456165827b4b9ddf27282bca93807d4c763e28414f133",
+        "expected_size_bytes": 5577,
+        "logical_name": "README",
+        "matches_trusted_fingerprint": true,
+        "sha256": "2d5ddce86ccbd247207456165827b4b9ddf27282bca93807d4c763e28414f133",
+        "size_bytes": 5577,
+        "source_member": "ml-1m/README"
+      }
+    ],
+    "name": "ml-1m.zip",
+    "origin": "input root"
+  },
+  "source_schemas": {
+    "movies.dat": {
+      "canonical_columns": [
+        "item_id",
+        "title",
+        "genres"
+      ],
+      "delimiter": "::",
+      "encoding": "ISO-8859-1",
+      "source_columns": [
+        "MovieID",
+        "Title",
+        "Genres"
+      ]
+    },
+    "ratings.dat": {
+      "canonical_columns": [
+        "user_id",
+        "item_id",
+        "rating",
+        "timestamp"
+      ],
+      "delimiter": "::",
+      "encoding": "ISO-8859-1",
+      "source_columns": [
+        "UserID",
+        "MovieID",
+        "Rating",
+        "Timestamp"
+      ]
+    },
+    "users.dat": {
+      "canonical_columns": [
+        "user_id",
+        "gender",
+        "age",
+        "occupation",
+        "zip_code"
+      ],
+      "delimiter": "::",
+      "encoding": "ISO-8859-1",
+      "source_columns": [
+        "UserID",
+        "Gender",
+        "Age",
+        "Occupation",
+        "Zip-code"
+      ]
+    }
+  },
+  "summary": {
+    "audit_schema_version": "ml1m-audit-v2",
+    "catalog_items": 3883,
+    "data_audit_pass": true,
+    "data_parsed": true,
+    "dataset": "MovieLens-1M",
+    "matrix_density": 0.04264679797998748,
+    "matrix_sparsity": 0.9573532020200125,
+    "rated_items": 3706,
+    "ratings": 1000209,
+    "release": "ml-1m",
+    "source_found": true,
+    "timestamp_max_utc": "2003-02-28T17:49:50+00:00",
+    "timestamp_min_utc": "2000-04-25T23:05:32+00:00",
+    "unparsed_release_years": 0,
+    "users": 6040
+  },
+  "upstream_notebook": "00_environment_and_reproducibility.ipynb"
+}

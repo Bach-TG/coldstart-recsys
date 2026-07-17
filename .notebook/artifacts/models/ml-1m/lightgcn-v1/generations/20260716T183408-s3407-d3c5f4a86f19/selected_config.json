@@ -1,0 +1,32 @@
+{
+  "protocol_pointer_sha256": "5256c3aeda7f7e619fd60d9530397af6a207c7a83d80c45cdd131e0d86fc2ee0",
+  "run_config_sha256": "4f56ea8b8660f4d38956b3bc570878d7de875e4ffa30f591f6614eaad89494ea",
+  "schema_version": "lightgcn-baseline-v1",
+  "selected_config": {
+    "embedding_dim": 64,
+    "epochs": 12,
+    "learning_rate": 0.003,
+    "n_layers": 3,
+    "sample_size": 65536,
+    "weight_decay": 0.0001
+  },
+  "selected_config_name": "cfg02_L3_D64",
+  "selected_summary": {
+    "config_name": "cfg02_L3_D64",
+    "embedding_dim": 64,
+    "epochs": 12,
+    "learning_rate": 0.003,
+    "mean_validation_auc": 0.5033091999742108,
+    "mean_validation_f1": 0.7593781470314975,
+    "n_layers": 3,
+    "sample_size": 65536,
+    "training_seconds": 2.492941320000682,
+    "weight_decay": 0.0001
+  },
+  "threshold_by_phase": {
+    "Cold": -0.026913650333881378,
+    "Warm A": -0.020123286172747612,
+    "Warm B": -0.01946069858968258,
+    "Warm C": -0.0187542587518692
+  }
+}

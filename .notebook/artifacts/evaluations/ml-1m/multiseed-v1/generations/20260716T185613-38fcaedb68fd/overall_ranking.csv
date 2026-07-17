@@ -1,0 +1,5 @@
+rank,family,model_label,phases,seed_count_min,f1_mean,roc_auc_mean
+1,emerg,EmerG,4,5,0.669218106742055,0.783909923684196
+2,dgd,DGD,4,5,0.6654607525400004,0.777825373933186
+3,dgd_ablation,DGD-Ablation:selected,4,5,0.6564732937367975,0.7698267159278962
+4,lightgcn,LightGCN,4,5,0.5797540867667453,0.49176900087644254

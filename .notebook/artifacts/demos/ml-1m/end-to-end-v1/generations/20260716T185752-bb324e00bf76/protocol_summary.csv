@@ -1,0 +1,9 @@
+quantity,value
+users,6040
+items,2375
+old/final train rows,854530
+tuning train rows,684728
+validation task rows,169802
+evaluation task rows,114869
+evaluation query rows,57569
+evaluation query positives,23501

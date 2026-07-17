@@ -1,0 +1,50 @@
+{
+  "protocol_pointer_sha256": "5256c3aeda7f7e619fd60d9530397af6a207c7a83d80c45cdd131e0d86fc2ee0",
+  "run_config_sha256": "8b216fb5999fa541395d0964681b06b42bf29c24a5387be9f64a25ee1bc0df07",
+  "schema_version": "hgd-model-v1",
+  "selected_config": {
+    "batch_size": 4096,
+    "embedding_dim": 32,
+    "epoch_sample_rows": 262144,
+    "epochs": 4,
+    "fusion_logit_init": -2.0,
+    "gnn_layers": 3,
+    "hidden_dim": 96,
+    "id_dropout": 0.3,
+    "learning_rate": 0.001,
+    "modulation_gate_init": 0.1,
+    "power_prior_bias": 4.0,
+    "sparsemax_scale": 5.0,
+    "warm_learning_rate": 0.01,
+    "warm_steps": 3,
+    "weight_decay": 1e-06
+  },
+  "selected_config_name": "cfg02_G3_D32",
+  "selected_summary": {
+    "batch_size": 4096,
+    "config_name": "cfg02_G3_D32",
+    "embedding_dim": 32,
+    "epoch_sample_rows": 262144,
+    "epochs": 4,
+    "fusion_logit_init": -2.0,
+    "gnn_layers": 3,
+    "hidden_dim": 96,
+    "id_dropout": 0.3,
+    "learning_rate": 0.001,
+    "mean_validation_auc": 0.7556049081181698,
+    "mean_validation_f1": 0.7902063200285747,
+    "modulation_gate_init": 0.1,
+    "power_prior_bias": 4.0,
+    "sparsemax_scale": 5.0,
+    "training_seconds": 2.253480095008854,
+    "warm_learning_rate": 0.01,
+    "warm_steps": 3,
+    "weight_decay": 1e-06
+  },
+  "threshold_by_phase": {
+    "Cold": 0.2361336201429367,
+    "Warm A": 0.361002653837204,
+    "Warm B": 0.38910973072052,
+    "Warm C": 0.377169668674469
+  }
+}

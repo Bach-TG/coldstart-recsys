@@ -1,0 +1,5 @@
+model,demo_role,source,live_inference_here
+LightGCN,ID-only collaborative-filtering baseline,notebook 03 via notebook 07/08,False
+EmerG,side-feature graph-generation baseline with warm local adaptation,notebook 04 via notebook 07/08,False
+DGD,proposed sparsemax graph-diffusion model,notebook 05 via notebook 07/08,False
+DGD ablation,validation-selected component ablation per seed,notebook 06 via notebook 07/08,False

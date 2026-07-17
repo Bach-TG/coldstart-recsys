@@ -1,0 +1,5 @@
+variant,mix_orders,sparsifier,description
+emerg_exact_topk,False,topk,Exact graph powers with hard Top-K selection; no learnable diffusion.
+mix_topk,True,topk,Learnable graph-power mixing with hard Top-K selection.
+exact_sparsemax,False,sparsemax,Exact graph powers with differentiable row-wise sparsemax.
+full_dgd,True,sparsemax,Learnable graph-power mixing with differentiable row-wise sparsemax.

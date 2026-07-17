@@ -1,0 +1,5 @@
+run_name,epoch,loss,examples
+gd_v2_reproduced_cfg02_G2_D32,1,0.5916689792647958,262144
+gd_v2_reproduced_cfg02_G2_D32,2,0.5423743687570095,262144
+gd_v2_reproduced_cfg02_G2_D32,3,0.5287978909909725,262144
+gd_v2_reproduced_cfg02_G2_D32,4,0.521637617610395,262144

@@ -1,0 +1,674 @@
+{
+  "artifacts": {
+    "config_summary": {
+      "path": "models/ml-1m/hgd-v1/generations/20260717T083728-s2025-32d05dc9a5fd/config_summary.csv",
+      "rows": 2,
+      "sha256": "24e564bde8547c2a928e2b2b9088797d8ee30ed08754d4d482d84291a8d3b548"
+    },
+    "diffusion_weights": {
+      "path": "models/ml-1m/hgd-v1/generations/20260717T083728-s2025-32d05dc9a5fd/diffusion_weights.csv",
+      "rows": 6,
+      "sha256": "fca5be02427140db662a7d7bdfb7d465ca29fe3cf4c053064892b891c34ea74f"
+    },
+    "evaluation_metrics": {
+      "path": "models/ml-1m/hgd-v1/generations/20260717T083728-s2025-32d05dc9a5fd/evaluation_metrics.csv",
+      "rows": 4,
+      "sha256": "2c47aeb8a56ea59c88d5f5a7c9ca4225d10b9549be6dee6138baa246103ac6da"
+    },
+    "evaluation_predictions": {
+      "path": "models/ml-1m/hgd-v1/generations/20260717T083728-s2025-32d05dc9a5fd/evaluation_predictions.csv",
+      "rows": 230276,
+      "sha256": "1ecabedaba23f3fecbf8b14fe34cfea00e195f0ae33cc29fad9eeb892f7824e5"
+    },
+    "feature_contract": {
+      "path": "models/ml-1m/hgd-v1/generations/20260717T083728-s2025-32d05dc9a5fd/feature_contract.json",
+      "sha256": "f5d7a4789d80549f5c0bcaa55e37246fbcf1aa8a650f0a70a46b2afe2e834af7"
+    },
+    "final_model_checkpoint": {
+      "path": "models/ml-1m/hgd-v1/generations/20260717T083728-s2025-32d05dc9a5fd/final_model.pt",
+      "sha256": "42447657d3657b5972d1fd0bceb9ba604328242bb96d52aeb2e6e1a1c0003ab3"
+    },
+    "fusion_gates": {
+      "path": "models/ml-1m/hgd-v1/generations/20260717T083728-s2025-32d05dc9a5fd/fusion_gates.csv",
+      "rows": 3,
+      "sha256": "13b08a5676d92a5213ada2fab48b511ee162e8e6d11bd03910275ddd22b35c51"
+    },
+    "graph_diagnostics": {
+      "path": "models/ml-1m/hgd-v1/generations/20260717T083728-s2025-32d05dc9a5fd/graph_diagnostics.csv",
+      "rows": 4956,
+      "sha256": "3c6b47c3d71961f6173de76d7038a54aff744056e26de106981151b104e4b2a5"
+    },
+    "selected_config": {
+      "path": "models/ml-1m/hgd-v1/generations/20260717T083728-s2025-32d05dc9a5fd/selected_config.json",
+      "sha256": "ca45266f4c7ff55a5dc2a7bc1963708184a3f56a0d4d99428e6f2fed4ac039b3"
+    },
+    "training_history": {
+      "path": "models/ml-1m/hgd-v1/generations/20260717T083728-s2025-32d05dc9a5fd/training_history.csv",
+      "rows": 12,
+      "sha256": "47e0ddc98c39033ec1baf2ebec5aed8a3492b31ca3a03d9e469a70098d9bd683"
+    },
+    "validation_metrics": {
+      "path": "models/ml-1m/hgd-v1/generations/20260717T083728-s2025-32d05dc9a5fd/validation_metrics.csv",
+      "rows": 4,
+      "sha256": "f2bdda4094ba62ec6f0c9d03e9c9b04ad15f1199345699ee47f02953b6050c7c"
+    },
+    "validation_predictions": {
+      "path": "models/ml-1m/hgd-v1/generations/20260717T083728-s2025-32d05dc9a5fd/validation_predictions.csv",
+      "rows": 611048,
+      "sha256": "d09f0b20dbe1011746cf45c2d2e8c8d0a89794a29c374848637598bff611d886"
+    },
+    "validation_thresholds": {
+      "path": "models/ml-1m/hgd-v1/generations/20260717T083728-s2025-32d05dc9a5fd/validation_thresholds.csv",
+      "rows": 4,
+      "sha256": "4b8006fd8ed68471af6b9e82db5384dcb771ffa807a3e9c086f36787bfe88857"
+    }
+  },
+  "bundle_id": "20260717T083728-s2025-32d05dc9a5fd",
+  "bundle_manifest": "models/ml-1m/hgd-v1/generations/20260717T083728-s2025-32d05dc9a5fd/manifest.json",
+  "checks": [
+    {
+      "check": "run config seed",
+      "expected": 2025,
+      "observed": 2025,
+      "status": "PASS"
+    },
+    {
+      "check": "protocol schema",
+      "expected": "ml1m-coldstart-v1",
+      "observed": "ml1m-coldstart-v1",
+      "status": "PASS"
+    },
+    {
+      "check": "hgd gradient check",
+      "expected": "PASS",
+      "observed": "PASS",
+      "status": "PASS"
+    },
+    {
+      "check": "hgd reduces to emerg at the closed-gate point",
+      "expected": "< 1e-4",
+      "observed": 7.450580596923828e-09,
+      "status": "PASS"
+    },
+    {
+      "check": "cold item id embedding is the trained-for zero vector",
+      "expected": 0.0,
+      "observed": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "phase thresholds complete",
+      "expected": [
+        "Cold",
+        "Warm A",
+        "Warm B",
+        "Warm C"
+      ],
+      "observed": [
+        "Cold",
+        "Warm A",
+        "Warm B",
+        "Warm C"
+      ],
+      "status": "PASS"
+    },
+    {
+      "check": "validation predictions complete",
+      "expected": 611048,
+      "observed": 611048,
+      "status": "PASS"
+    },
+    {
+      "check": "evaluation predictions complete",
+      "expected": 230276,
+      "observed": 230276,
+      "status": "PASS"
+    },
+    {
+      "check": "evaluation phases complete",
+      "expected": [
+        "Cold",
+        "Warm A",
+        "Warm B",
+        "Warm C"
+      ],
+      "observed": [
+        "Cold",
+        "Warm A",
+        "Warm B",
+        "Warm C"
+      ],
+      "status": "PASS"
+    },
+    {
+      "check": "final train excludes evaluation items",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "feature contract has PAD/UNK",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "graph diagnostics complete",
+      "expected": [
+        "Cold",
+        "Warm A",
+        "Warm B",
+        "Warm C"
+      ],
+      "observed": [
+        "Cold",
+        "Warm A",
+        "Warm B",
+        "Warm C"
+      ],
+      "status": "PASS"
+    },
+    {
+      "check": "self loops preserved on every scored graph",
+      "expected": "< 1e-6",
+      "observed": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "fusion gates valid",
+      "expected": 3,
+      "observed": 3,
+      "status": "PASS"
+    },
+    {
+      "check": "diffusion weights valid",
+      "expected": 6,
+      "observed": 6,
+      "status": "PASS"
+    },
+    {
+      "check": "training values finite",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "validation values finite",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "evaluation values finite",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    }
+  ],
+  "created_at_utc": "2026-07-17T08:38:44.214967+00:00",
+  "feature_contract_sha256": "f5d7a4789d80549f5c0bcaa55e37246fbcf1aa8a650f0a70a46b2afe2e834af7",
+  "model_name": "HGD",
+  "model_schema_version": "hgd-model-v1",
+  "model_status": "PASS",
+  "output_schemas": {
+    "config_summary": {
+      "columns": [
+        "config_name",
+        "mean_validation_f1",
+        "mean_validation_auc",
+        "training_seconds",
+        "embedding_dim",
+        "hidden_dim",
+        "gnn_layers",
+        "learning_rate",
+        "warm_learning_rate",
+        "weight_decay",
+        "sparsemax_scale",
+        "fusion_logit_init",
+        "modulation_gate_init",
+        "power_prior_bias",
+        "id_dropout",
+        "epochs",
+        "epoch_sample_rows",
+        "batch_size",
+        "warm_steps"
+      ],
+      "read_csv_dtypes": {
+        "batch_size": "int64",
+        "config_name": "string",
+        "embedding_dim": "int64",
+        "epoch_sample_rows": "int64",
+        "epochs": "int64",
+        "fusion_logit_init": "float64",
+        "gnn_layers": "int64",
+        "hidden_dim": "int64",
+        "id_dropout": "float64",
+        "learning_rate": "float64",
+        "mean_validation_auc": "float64",
+        "mean_validation_f1": "float64",
+        "modulation_gate_init": "float64",
+        "power_prior_bias": "float64",
+        "sparsemax_scale": "float64",
+        "training_seconds": "float64",
+        "warm_learning_rate": "float64",
+        "warm_steps": "int64",
+        "weight_decay": "float64"
+      }
+    },
+    "diffusion_weights": {
+      "columns": [
+        "layer",
+        "power",
+        "weight"
+      ],
+      "read_csv_dtypes": {
+        "layer": "int64",
+        "power": "int64",
+        "weight": "float64"
+      }
+    },
+    "evaluation_metrics": {
+      "columns": [
+        "split",
+        "phase",
+        "rows",
+        "positives",
+        "threshold",
+        "accuracy",
+        "precision",
+        "recall",
+        "f1",
+        "roc_auc",
+        "predicted_positive_rate",
+        "score_mean",
+        "score_std",
+        "tp",
+        "fp",
+        "fn",
+        "tn",
+        "config_name"
+      ],
+      "read_csv_dtypes": {
+        "accuracy": "float64",
+        "config_name": "string",
+        "f1": "float64",
+        "fn": "int64",
+        "fp": "int64",
+        "phase": "string",
+        "positives": "int64",
+        "precision": "float64",
+        "predicted_positive_rate": "float64",
+        "recall": "float64",
+        "roc_auc": "float64",
+        "rows": "int64",
+        "score_mean": "float64",
+        "score_std": "float64",
+        "split": "string",
+        "threshold": "float64",
+        "tn": "int64",
+        "tp": "int64"
+      }
+    },
+    "evaluation_predictions": {
+      "columns": [
+        "phase",
+        "source_row",
+        "user_id",
+        "user_idx",
+        "item_id",
+        "item_idx",
+        "label",
+        "score"
+      ],
+      "read_csv_dtypes": {
+        "item_id": "int64",
+        "item_idx": "int64",
+        "label": "int8",
+        "phase": "string",
+        "score": "float32",
+        "source_row": "int64",
+        "user_id": "int64",
+        "user_idx": "int64"
+      }
+    },
+    "fusion_gates": {
+      "columns": [
+        "layer",
+        "sparse_fusion_alpha",
+        "dense_temperature",
+        "modulation_gate"
+      ],
+      "read_csv_dtypes": {
+        "dense_temperature": "float64",
+        "layer": "int64",
+        "modulation_gate": "float64",
+        "sparse_fusion_alpha": "float64"
+      }
+    },
+    "graph_diagnostics": {
+      "columns": [
+        "split",
+        "item_id",
+        "item_idx",
+        "phase",
+        "base_graph_mean",
+        "fused_graph_mean",
+        "fused_graph_std",
+        "fused_density_gt_1e_6",
+        "fused_diag_mean",
+        "sparse_branch_density_gt_1e_6",
+        "sparse_branch_row_sum_error",
+        "local_delta_norm",
+        "last_warm_loss",
+        "config_name",
+        "selected_config_name",
+        "final_training_seconds",
+        "device"
+      ],
+      "read_csv_dtypes": {
+        "base_graph_mean": "float64",
+        "config_name": "string",
+        "device": "string",
+        "final_training_seconds": "float64",
+        "fused_density_gt_1e_6": "float64",
+        "fused_diag_mean": "float64",
+        "fused_graph_mean": "float64",
+        "fused_graph_std": "float64",
+        "item_id": "int64",
+        "item_idx": "int64",
+        "last_warm_loss": "float64",
+        "local_delta_norm": "float64",
+        "phase": "string",
+        "selected_config_name": "string",
+        "sparse_branch_density_gt_1e_6": "float64",
+        "sparse_branch_row_sum_error": "float64",
+        "split": "string"
+      }
+    },
+    "training_history": {
+      "columns": [
+        "run_name",
+        "epoch",
+        "loss",
+        "examples",
+        "config_name"
+      ],
+      "read_csv_dtypes": {
+        "config_name": "string",
+        "epoch": "int64",
+        "examples": "int64",
+        "loss": "float64",
+        "run_name": "string"
+      }
+    },
+    "validation_metrics": {
+      "columns": [
+        "split",
+        "phase",
+        "rows",
+        "positives",
+        "threshold",
+        "accuracy",
+        "precision",
+        "recall",
+        "f1",
+        "roc_auc",
+        "predicted_positive_rate",
+        "score_mean",
+        "score_std",
+        "tp",
+        "fp",
+        "fn",
+        "tn",
+        "config_name"
+      ],
+      "read_csv_dtypes": {
+        "accuracy": "float64",
+        "config_name": "string",
+        "f1": "float64",
+        "fn": "int64",
+        "fp": "int64",
+        "phase": "string",
+        "positives": "int64",
+        "precision": "float64",
+        "predicted_positive_rate": "float64",
+        "recall": "float64",
+        "roc_auc": "float64",
+        "rows": "int64",
+        "score_mean": "float64",
+        "score_std": "float64",
+        "split": "string",
+        "threshold": "float64",
+        "tn": "int64",
+        "tp": "int64"
+      }
+    },
+    "validation_predictions": {
+      "columns": [
+        "phase",
+        "source_row",
+        "user_id",
+        "user_idx",
+        "item_id",
+        "item_idx",
+        "label",
+        "score"
+      ],
+      "read_csv_dtypes": {
+        "item_id": "int64",
+        "item_idx": "int64",
+        "label": "int8",
+        "phase": "string",
+        "score": "float32",
+        "source_row": "int64",
+        "user_id": "int64",
+        "user_idx": "int64"
+      }
+    },
+    "validation_thresholds": {
+      "columns": [
+        "split",
+        "phase",
+        "threshold",
+        "validation_best_f1",
+        "config_name"
+      ],
+      "read_csv_dtypes": {
+        "config_name": "string",
+        "phase": "string",
+        "split": "string",
+        "threshold": "float64",
+        "validation_best_f1": "float64"
+      }
+    }
+  },
+  "phase_contract": {
+    "Cold": {
+      "adaptation_increment": [],
+      "graph_visible_support": []
+    },
+    "Warm A": {
+      "adaptation_increment": [
+        "warm_a"
+      ],
+      "graph_visible_support": [
+        "warm_a"
+      ]
+    },
+    "Warm B": {
+      "adaptation_increment": [
+        "warm_b"
+      ],
+      "continue_item_state_from": "Warm A",
+      "graph_visible_support": [
+        "warm_a",
+        "warm_b"
+      ]
+    },
+    "Warm C": {
+      "adaptation_increment": [
+        "warm_c"
+      ],
+      "continue_item_state_from": "Warm B",
+      "graph_visible_support": [
+        "warm_a",
+        "warm_b",
+        "warm_c"
+      ]
+    },
+    "query": "identical role=query rows in every phase"
+  },
+  "run_config": {
+    "budget_parity": "epochs, epoch_sample_rows, batch_size, learning rates, weight decay and warm_steps match notebooks 04 and 05 so the comparison isolates the method",
+    "candidate_configs": [
+      {
+        "batch_size": 4096,
+        "embedding_dim": 16,
+        "epoch_sample_rows": 262144,
+        "epochs": 4,
+        "fusion_logit_init": -2.0,
+        "gnn_layers": 2,
+        "hidden_dim": 64,
+        "id_dropout": 0.3,
+        "learning_rate": 0.001,
+        "modulation_gate_init": 0.1,
+        "power_prior_bias": 4.0,
+        "sparsemax_scale": 5.0,
+        "warm_learning_rate": 0.01,
+        "warm_steps": 3,
+        "weight_decay": 1e-06
+      },
+      {
+        "batch_size": 4096,
+        "embedding_dim": 32,
+        "epoch_sample_rows": 262144,
+        "epochs": 4,
+        "fusion_logit_init": -2.0,
+        "gnn_layers": 3,
+        "hidden_dim": 96,
+        "id_dropout": 0.3,
+        "learning_rate": 0.001,
+        "modulation_gate_init": 0.1,
+        "power_prior_bias": 4.0,
+        "sparsemax_scale": 5.0,
+        "warm_learning_rate": 0.01,
+        "warm_steps": 3,
+        "weight_decay": 1e-06
+      }
+    ],
+    "cold_start_prior": "item id embedding zero-initialised and always summed with an embedding synthesised from audited item side information; id dropout during training",
+    "fast_dev_run": false,
+    "feature_policy": "fit categorical/text vocabularies on tuning-visible users/items; use PAD/UNK",
+    "field_order": [
+      "user_id",
+      "gender",
+      "age",
+      "occupation",
+      "zip_code",
+      "item_id",
+      "release_year",
+      "genres",
+      "title"
+    ],
+    "graph": "per-layer convex fusion of an EmerG dense sigmoid adjacency with a DGD row-sparsemax adjacency, both read off the same learnable mixture of graph powers 1..l, with EmerG self-loops forced after fusion",
+    "item_graph_fields": [
+      "item_id",
+      "release_year",
+      "genres",
+      "title"
+    ],
+    "item_side_fields": [
+      "release_year",
+      "genres",
+      "title"
+    ],
+    "max_genre_tokens": 6,
+    "max_title_tokens": 8,
+    "phase_order": [
+      "Cold",
+      "Warm A",
+      "Warm B",
+      "Warm C"
+    ],
+    "propagation": "EmerG additive residual message passing over the fused graph plus a gated DGD multiplicative modulation computed from the layer-0 field embeddings",
+    "schema_version": "hgd-model-v1",
+    "seed": 2025,
+    "warmup_policy": "adapt local item embedding and graph delta sequentially: A, then B only, then C only"
+  },
+  "run_config_sha256": "6aaa8b39e20071acc3b96d4be9efab61352bdaa21734305c99750d5201cc1c18",
+  "selected_config": {
+    "protocol_pointer_sha256": "5256c3aeda7f7e619fd60d9530397af6a207c7a83d80c45cdd131e0d86fc2ee0",
+    "run_config_sha256": "6aaa8b39e20071acc3b96d4be9efab61352bdaa21734305c99750d5201cc1c18",
+    "schema_version": "hgd-model-v1",
+    "selected_config": {
+      "batch_size": 4096,
+      "embedding_dim": 32,
+      "epoch_sample_rows": 262144,
+      "epochs": 4,
+      "fusion_logit_init": -2.0,
+      "gnn_layers": 3,
+      "hidden_dim": 96,
+      "id_dropout": 0.3,
+      "learning_rate": 0.001,
+      "modulation_gate_init": 0.1,
+      "power_prior_bias": 4.0,
+      "sparsemax_scale": 5.0,
+      "warm_learning_rate": 0.01,
+      "warm_steps": 3,
+      "weight_decay": 1e-06
+    },
+    "selected_config_name": "cfg02_G3_D32",
+    "selected_summary": {
+      "batch_size": 4096,
+      "config_name": "cfg02_G3_D32",
+      "embedding_dim": 32,
+      "epoch_sample_rows": 262144,
+      "epochs": 4,
+      "fusion_logit_init": -2.0,
+      "gnn_layers": 3,
+      "hidden_dim": 96,
+      "id_dropout": 0.3,
+      "learning_rate": 0.001,
+      "mean_validation_auc": 0.7555914998431781,
+      "mean_validation_f1": 0.7893361749917301,
+      "modulation_gate_init": 0.1,
+      "power_prior_bias": 4.0,
+      "sparsemax_scale": 5.0,
+      "training_seconds": 2.2712294079829007,
+      "warm_learning_rate": 0.01,
+      "warm_steps": 3,
+      "weight_decay": 1e-06
+    },
+    "threshold_by_phase": {
+      "Cold": 0.23201340436935425,
+      "Warm A": 0.3406558334827423,
+      "Warm B": 0.3927047848701477,
+      "Warm C": 0.3918566107749939
+    }
+  },
+  "summary": {
+    "evaluation_prediction_rows": 230276,
+    "final_training_seconds": 2.234317305032164,
+    "mean_evaluation_auc": 0.7842146698463245,
+    "mean_evaluation_f1": 0.6665775264176933,
+    "mean_validation_auc": 0.7555914998431781,
+    "mean_validation_f1": 0.7893361749917301,
+    "selected_config_name": "cfg02_G3_D32"
+  },
+  "training_contract": {
+    "budget_parity": "epochs, epoch_sample_rows, batch_size, learning rates, weight decay and warm_steps match notebooks 04 and 05 so the comparison isolates the method",
+    "cold_start_prior": "item id embedding zero-initialised and always summed with an embedding synthesised from audited item side information; id dropout during training",
+    "features": "audited user/item side information only; no interaction_count/cohort/timestamp/rank features",
+    "final_refit_base": "final_train from notebook 02 after thresholds/config are frozen",
+    "graph": "per-layer convex fusion of an EmerG dense sigmoid adjacency with a DGD row-sparsemax adjacency, both read off the same learnable mixture of graph powers 1..l, with EmerG self-loops forced after fusion",
+    "propagation": "EmerG additive residual message passing over the fused graph plus a gated DGD multiplicative modulation computed from the layer-0 field embeddings",
+    "thresholds": "selected on validation query rows only and frozen for evaluation",
+    "tuning_base": "tuning_train from notebook 02",
+    "warmup": "adapt local item embedding and graph delta sequentially: A, then B only, then C only"
+  },
+  "upstream_protocol": {
+    "bundle_id": "20260716T183148-e7b92de81a1e",
+    "pointer_sha256": "5256c3aeda7f7e619fd60d9530397af6a207c7a83d80c45cdd131e0d86fc2ee0",
+    "schema_version": "ml1m-coldstart-v1"
+  }
+}

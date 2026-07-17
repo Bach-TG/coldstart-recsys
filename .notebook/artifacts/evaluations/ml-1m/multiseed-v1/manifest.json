@@ -1,0 +1,681 @@
+{
+  "artifacts": {
+    "aggregate_metrics": {
+      "path": "evaluations/ml-1m/multiseed-v1/generations/20260716T185613-38fcaedb68fd/aggregate_metrics.csv",
+      "rows": 16,
+      "sha256": "0ceac0ed9f3b2d20caab8e696f5ff16d8c5f1e5f050dbd6e4c5b2478253f231a"
+    },
+    "artifact_audit": {
+      "path": "evaluations/ml-1m/multiseed-v1/generations/20260716T185613-38fcaedb68fd/artifact_audit.csv",
+      "rows": 60,
+      "sha256": "d22dce06d0b41c0bf9f2362b18741b2a9305138cb02a926027e9da95539b2590"
+    },
+    "non_target_runs": {
+      "path": "evaluations/ml-1m/multiseed-v1/generations/20260716T185613-38fcaedb68fd/non_target_runs.csv",
+      "rows": 0,
+      "sha256": "0d692c5bef2df751cc3c3aa556bcc467b9b7f92de576324c440a3457606ceff6"
+    },
+    "overall_ranking": {
+      "path": "evaluations/ml-1m/multiseed-v1/generations/20260716T185613-38fcaedb68fd/overall_ranking.csv",
+      "rows": 4,
+      "sha256": "4aa07a656efa0b7024d4ed8492498d0cb117cfc1bd2130daef0bc16c546c2bb6"
+    },
+    "per_run_metrics": {
+      "path": "evaluations/ml-1m/multiseed-v1/generations/20260716T185613-38fcaedb68fd/per_run_metrics.csv",
+      "rows": 80,
+      "sha256": "829d7e734b300759488553e949c93b962b7a272a0644e1c885607cf3a22badb3"
+    },
+    "phase_ranking": {
+      "path": "evaluations/ml-1m/multiseed-v1/generations/20260716T185613-38fcaedb68fd/phase_ranking.csv",
+      "rows": 16,
+      "sha256": "fe4c63c61079f195b53170c6e7b8b71042948d76a07da6538f4867e815b1c84c"
+    },
+    "prediction_artifact_registry": {
+      "path": "evaluations/ml-1m/multiseed-v1/generations/20260716T185613-38fcaedb68fd/prediction_artifact_registry.csv",
+      "rows": 20,
+      "sha256": "fc9c7f686c50a11362a6a177654a087af52f7b32009674302b8ab4ef980bf989"
+    },
+    "reproducibility_audit": {
+      "path": "evaluations/ml-1m/multiseed-v1/generations/20260716T185613-38fcaedb68fd/reproducibility_audit.csv",
+      "rows": 13,
+      "sha256": "a11e055027a828e9c110e748b426f60611144734476966bf8b92fa6fec7b1e60"
+    },
+    "run_registry": {
+      "path": "evaluations/ml-1m/multiseed-v1/generations/20260716T185613-38fcaedb68fd/run_registry.csv",
+      "rows": 20,
+      "sha256": "6195553f17b22ad04e87fe88d2906cb3b43620128492e7ef6631f19d877dd971"
+    },
+    "seed_coverage": {
+      "path": "evaluations/ml-1m/multiseed-v1/generations/20260716T185613-38fcaedb68fd/seed_coverage.csv",
+      "rows": 20,
+      "sha256": "98c178317ff05f2ece35108acc2ffc29f58e6c157d26e2ec48cd23300705d51c"
+    },
+    "validation_thresholds": {
+      "path": "evaluations/ml-1m/multiseed-v1/generations/20260716T185613-38fcaedb68fd/validation_thresholds.csv",
+      "rows": 80,
+      "sha256": "24542e8281cb74407ff3e21de64096fedb1d230547fd706ad689776dd85a61fd"
+    }
+  },
+  "bundle_id": "20260716T185613-38fcaedb68fd",
+  "bundle_manifest": "evaluations/ml-1m/multiseed-v1/generations/20260716T185613-38fcaedb68fd/manifest.json",
+  "checks": [
+    {
+      "check": "required model families present",
+      "expected": [
+        "dgd",
+        "dgd_ablation",
+        "emerg",
+        "lightgcn"
+      ],
+      "observed": [
+        "dgd",
+        "dgd_ablation",
+        "emerg",
+        "lightgcn"
+      ],
+      "severity": "ERROR",
+      "status": "PASS"
+    },
+    {
+      "check": "protocol schema",
+      "expected": [
+        "ml1m-coldstart-v1"
+      ],
+      "observed": [
+        "ml1m-coldstart-v1"
+      ],
+      "severity": "ERROR",
+      "status": "PASS"
+    },
+    {
+      "check": "single protocol identity",
+      "expected": "one nonempty protocol pointer sha256",
+      "observed": [
+        "5256c3aeda7f7e619fd60d9530397af6a207c7a83d80c45cdd131e0d86fc2ee0"
+      ],
+      "severity": "ERROR",
+      "status": "PASS"
+    },
+    {
+      "check": "phase coverage",
+      "expected": [
+        "Cold",
+        "Warm A",
+        "Warm B",
+        "Warm C"
+      ],
+      "observed": [
+        "Cold",
+        "Warm A",
+        "Warm B",
+        "Warm C"
+      ],
+      "severity": "ERROR",
+      "status": "PASS"
+    },
+    {
+      "check": "metric rows unique",
+      "expected": 80,
+      "observed": 80,
+      "severity": "ERROR",
+      "status": "PASS"
+    },
+    {
+      "check": "threshold rows unique",
+      "expected": 80,
+      "observed": 80,
+      "severity": "ERROR",
+      "status": "PASS"
+    },
+    {
+      "check": "target run-phase coverage",
+      "expected": {
+        "metric_rows": 80,
+        "runs": 20,
+        "threshold_rows": 80
+      },
+      "observed": {
+        "metric_rows": 80,
+        "runs": 20,
+        "threshold_rows": 80
+      },
+      "severity": "WARN",
+      "status": "PASS"
+    },
+    {
+      "check": "non-target seeds excluded from metrics",
+      "expected": [],
+      "observed": [],
+      "severity": "ERROR",
+      "status": "PASS"
+    },
+    {
+      "check": "prediction artifacts verified",
+      "expected": 20,
+      "observed": 20,
+      "severity": "ERROR",
+      "status": "PASS"
+    },
+    {
+      "check": "source model quality clean",
+      "expected": "no source WARN runs",
+      "observed": [
+        {
+          "bundle_id": "20260716T183339-s2025-a370f5a1659c",
+          "family": "lightgcn",
+          "model_label": "LightGCN",
+          "seed": 2025
+        },
+        {
+          "bundle_id": "20260716T183408-s3407-d3c5f4a86f19",
+          "family": "lightgcn",
+          "model_label": "LightGCN",
+          "seed": 3407
+        },
+        {
+          "bundle_id": "20260716T183419-s4517-388725ed3236",
+          "family": "lightgcn",
+          "model_label": "LightGCN",
+          "seed": 4517
+        },
+        {
+          "bundle_id": "20260716T183349-s7788-055a93bf6705",
+          "family": "lightgcn",
+          "model_label": "LightGCN",
+          "seed": 7788
+        },
+        {
+          "bundle_id": "20260716T183359-s9999-6cc7ff772669",
+          "family": "lightgcn",
+          "model_label": "LightGCN",
+          "seed": 9999
+        }
+      ],
+      "severity": "WARN",
+      "status": "WARN"
+    },
+    {
+      "check": "selected ablation stable",
+      "expected": "one validation-selected ablation variant across seeds",
+      "observed": [
+        "full_dgd"
+      ],
+      "severity": "WARN",
+      "status": "PASS"
+    },
+    {
+      "check": "target seeds complete",
+      "expected": "no missing target runs or phases",
+      "observed": {},
+      "severity": "WARN",
+      "status": "PASS"
+    },
+    {
+      "check": "manifest discovery clean",
+      "expected": "no discovery errors",
+      "observed": [],
+      "severity": "WARN",
+      "status": "PASS"
+    }
+  ],
+  "coverage_status": "COMPLETE",
+  "created_at_utc": "2026-07-16T18:56:13.830394+00:00",
+  "evaluation_schema_version": "multiseed-evaluation-v1",
+  "evaluation_status": "WARN",
+  "output_schemas": {
+    "aggregate_metrics": {
+      "columns": [
+        "family",
+        "model_label",
+        "phase",
+        "seed_count",
+        "target_seed_count_observed",
+        "target_seed_count",
+        "target_seed_count_met",
+        "accuracy_mean",
+        "accuracy_std",
+        "accuracy_sem",
+        "precision_mean",
+        "precision_std",
+        "precision_sem",
+        "recall_mean",
+        "recall_std",
+        "recall_sem",
+        "f1_mean",
+        "f1_std",
+        "f1_sem",
+        "roc_auc_mean",
+        "roc_auc_std",
+        "roc_auc_sem",
+        "predicted_positive_rate_mean",
+        "predicted_positive_rate_std",
+        "predicted_positive_rate_sem"
+      ],
+      "read_csv_dtypes": {
+        "accuracy_mean": "float64",
+        "accuracy_sem": "float64",
+        "accuracy_std": "float64",
+        "f1_mean": "float64",
+        "f1_sem": "float64",
+        "f1_std": "float64",
+        "family": "string",
+        "model_label": "string",
+        "phase": "string",
+        "precision_mean": "float64",
+        "precision_sem": "float64",
+        "precision_std": "float64",
+        "predicted_positive_rate_mean": "float64",
+        "predicted_positive_rate_sem": "float64",
+        "predicted_positive_rate_std": "float64",
+        "recall_mean": "float64",
+        "recall_sem": "float64",
+        "recall_std": "float64",
+        "roc_auc_mean": "float64",
+        "roc_auc_sem": "float64",
+        "roc_auc_std": "float64",
+        "seed_count": "int64",
+        "target_seed_count": "int64",
+        "target_seed_count_met": "bool",
+        "target_seed_count_observed": "int64"
+      }
+    },
+    "artifact_audit": {
+      "columns": [
+        "family",
+        "model_label",
+        "seed",
+        "bundle_id",
+        "source_status",
+        "artifact",
+        "present",
+        "verified",
+        "rows",
+        "sha256"
+      ],
+      "read_csv_dtypes": {
+        "artifact": "string",
+        "bundle_id": "string",
+        "family": "string",
+        "model_label": "string",
+        "present": "bool",
+        "rows": "int64",
+        "seed": "int64",
+        "sha256": "string",
+        "source_status": "string",
+        "verified": "bool"
+      }
+    },
+    "non_target_runs": {
+      "columns": [
+        "family",
+        "model_label",
+        "selected_variant",
+        "prediction_scope",
+        "source_status",
+        "schema_version",
+        "seed",
+        "bundle_id",
+        "created_at_utc",
+        "protocol_schema_version",
+        "protocol_pointer_sha256",
+        "manifest_path"
+      ],
+      "read_csv_dtypes": {
+        "bundle_id": "string",
+        "created_at_utc": "string",
+        "family": "string",
+        "manifest_path": "string",
+        "model_label": "string",
+        "prediction_scope": "string",
+        "protocol_pointer_sha256": "string",
+        "protocol_schema_version": "string",
+        "schema_version": "string",
+        "seed": "int64",
+        "selected_variant": "string",
+        "source_status": "string"
+      }
+    },
+    "overall_ranking": {
+      "columns": [
+        "rank",
+        "family",
+        "model_label",
+        "phases",
+        "seed_count_min",
+        "f1_mean",
+        "roc_auc_mean"
+      ],
+      "read_csv_dtypes": {
+        "f1_mean": "float64",
+        "family": "string",
+        "model_label": "string",
+        "phases": "int64",
+        "rank": "int64",
+        "roc_auc_mean": "float64",
+        "seed_count_min": "int64"
+      }
+    },
+    "per_run_metrics": {
+      "columns": [
+        "family",
+        "model_label",
+        "seed",
+        "bundle_id",
+        "schema_version",
+        "protocol_pointer_sha256",
+        "source_status",
+        "split",
+        "phase",
+        "rows",
+        "positives",
+        "threshold",
+        "accuracy",
+        "precision",
+        "recall",
+        "f1",
+        "roc_auc",
+        "predicted_positive_rate",
+        "score_mean",
+        "score_std",
+        "tp",
+        "fp",
+        "fn",
+        "tn",
+        "config_name",
+        "variant"
+      ],
+      "read_csv_dtypes": {
+        "accuracy": "float64",
+        "bundle_id": "string",
+        "config_name": "string",
+        "f1": "float64",
+        "family": "string",
+        "fn": "int64",
+        "fp": "int64",
+        "model_label": "string",
+        "phase": "string",
+        "positives": "int64",
+        "precision": "float64",
+        "predicted_positive_rate": "float64",
+        "protocol_pointer_sha256": "string",
+        "recall": "float64",
+        "roc_auc": "float64",
+        "rows": "int64",
+        "schema_version": "string",
+        "score_mean": "float64",
+        "score_std": "float64",
+        "seed": "int64",
+        "source_status": "string",
+        "split": "string",
+        "threshold": "float64",
+        "tn": "int64",
+        "tp": "int64",
+        "variant": "string"
+      }
+    },
+    "phase_ranking": {
+      "columns": [
+        "phase",
+        "rank",
+        "family",
+        "model_label",
+        "seed_count",
+        "target_seed_count_observed",
+        "target_seed_count",
+        "target_seed_count_met",
+        "accuracy_mean",
+        "accuracy_std",
+        "accuracy_sem",
+        "precision_mean",
+        "precision_std",
+        "precision_sem",
+        "recall_mean",
+        "recall_std",
+        "recall_sem",
+        "f1_mean",
+        "f1_std",
+        "f1_sem",
+        "roc_auc_mean",
+        "roc_auc_std",
+        "roc_auc_sem",
+        "predicted_positive_rate_mean",
+        "predicted_positive_rate_std",
+        "predicted_positive_rate_sem"
+      ],
+      "read_csv_dtypes": {
+        "accuracy_mean": "float64",
+        "accuracy_sem": "float64",
+        "accuracy_std": "float64",
+        "f1_mean": "float64",
+        "f1_sem": "float64",
+        "f1_std": "float64",
+        "family": "string",
+        "model_label": "string",
+        "phase": "string",
+        "precision_mean": "float64",
+        "precision_sem": "float64",
+        "precision_std": "float64",
+        "predicted_positive_rate_mean": "float64",
+        "predicted_positive_rate_sem": "float64",
+        "predicted_positive_rate_std": "float64",
+        "rank": "int64",
+        "recall_mean": "float64",
+        "recall_sem": "float64",
+        "recall_std": "float64",
+        "roc_auc_mean": "float64",
+        "roc_auc_sem": "float64",
+        "roc_auc_std": "float64",
+        "seed_count": "int64",
+        "target_seed_count": "int64",
+        "target_seed_count_met": "bool",
+        "target_seed_count_observed": "int64"
+      }
+    },
+    "prediction_artifact_registry": {
+      "columns": [
+        "family",
+        "model_label",
+        "seed",
+        "bundle_id",
+        "selected_variant",
+        "prediction_scope",
+        "source_status",
+        "evaluation_predictions_path",
+        "evaluation_predictions_sha256"
+      ],
+      "read_csv_dtypes": {
+        "bundle_id": "string",
+        "evaluation_predictions_path": "string",
+        "evaluation_predictions_sha256": "string",
+        "family": "string",
+        "model_label": "string",
+        "prediction_scope": "string",
+        "seed": "int64",
+        "selected_variant": "string",
+        "source_status": "string"
+      }
+    },
+    "reproducibility_audit": {
+      "columns": [
+        "check",
+        "status",
+        "observed",
+        "expected",
+        "severity"
+      ],
+      "read_csv_dtypes": {
+        "check": "string",
+        "expected": "object",
+        "observed": "object",
+        "severity": "string",
+        "status": "string"
+      }
+    },
+    "run_registry": {
+      "columns": [
+        "family",
+        "model_label",
+        "selected_variant",
+        "prediction_scope",
+        "source_status",
+        "schema_version",
+        "seed",
+        "bundle_id",
+        "created_at_utc",
+        "protocol_schema_version",
+        "protocol_pointer_sha256",
+        "manifest_path"
+      ],
+      "read_csv_dtypes": {
+        "bundle_id": "string",
+        "created_at_utc": "string",
+        "family": "string",
+        "manifest_path": "string",
+        "model_label": "string",
+        "prediction_scope": "string",
+        "protocol_pointer_sha256": "string",
+        "protocol_schema_version": "string",
+        "schema_version": "string",
+        "seed": "int64",
+        "selected_variant": "string",
+        "source_status": "string"
+      }
+    },
+    "seed_coverage": {
+      "columns": [
+        "family",
+        "model_label",
+        "seed",
+        "expected_seed",
+        "present"
+      ],
+      "read_csv_dtypes": {
+        "expected_seed": "bool",
+        "family": "string",
+        "model_label": "string",
+        "present": "bool",
+        "seed": "int64"
+      }
+    },
+    "validation_thresholds": {
+      "columns": [
+        "family",
+        "model_label",
+        "seed",
+        "bundle_id",
+        "schema_version",
+        "protocol_pointer_sha256",
+        "source_status",
+        "split",
+        "phase",
+        "threshold",
+        "validation_best_f1",
+        "config_name",
+        "variant"
+      ],
+      "read_csv_dtypes": {
+        "bundle_id": "string",
+        "config_name": "string",
+        "family": "string",
+        "model_label": "string",
+        "phase": "string",
+        "protocol_pointer_sha256": "string",
+        "schema_version": "string",
+        "seed": "int64",
+        "source_status": "string",
+        "split": "string",
+        "threshold": "float64",
+        "validation_best_f1": "float64",
+        "variant": "string"
+      }
+    }
+  },
+  "run_config": {
+    "expected_families": {
+      "dgd": {
+        "label": "DGD",
+        "schema": "dgd-model-v1"
+      },
+      "dgd_ablation": {
+        "label": "DGD-Ablation",
+        "schema": "dgd-ablation-v1"
+      },
+      "emerg": {
+        "label": "EmerG",
+        "schema": "emerg-baseline-v1"
+      },
+      "lightgcn": {
+        "label": "LightGCN",
+        "schema": "lightgcn-baseline-v1"
+      }
+    },
+    "phase_order": [
+      "Cold",
+      "Warm A",
+      "Warm B",
+      "Warm C"
+    ],
+    "schema_version": "multiseed-evaluation-v1",
+    "selection_policy": "aggregate verified result bundles; do not tune on evaluation metrics",
+    "target_seeds": [
+      2025,
+      7788,
+      9999,
+      3407,
+      4517
+    ]
+  },
+  "run_config_sha256": "34dd820eba950c6d1a503a15e02e49436d4f75d86ee76077e81520cdd12084f3",
+  "summary": {
+    "best_mean_auc": 0.783909923684196,
+    "best_mean_f1": 0.669218106742055,
+    "best_model_by_mean_f1": "EmerG",
+    "missing_target_seeds": {},
+    "models": 4,
+    "non_target_runs_recorded": 0,
+    "runs": 20,
+    "selected_ablation_variants": [
+      "full_dgd"
+    ],
+    "source_warning_runs": [
+      {
+        "bundle_id": "20260716T183339-s2025-a370f5a1659c",
+        "family": "lightgcn",
+        "model_label": "LightGCN",
+        "seed": 2025
+      },
+      {
+        "bundle_id": "20260716T183408-s3407-d3c5f4a86f19",
+        "family": "lightgcn",
+        "model_label": "LightGCN",
+        "seed": 3407
+      },
+      {
+        "bundle_id": "20260716T183419-s4517-388725ed3236",
+        "family": "lightgcn",
+        "model_label": "LightGCN",
+        "seed": 4517
+      },
+      {
+        "bundle_id": "20260716T183349-s7788-055a93bf6705",
+        "family": "lightgcn",
+        "model_label": "LightGCN",
+        "seed": 7788
+      },
+      {
+        "bundle_id": "20260716T183359-s9999-6cc7ff772669",
+        "family": "lightgcn",
+        "model_label": "LightGCN",
+        "seed": 9999
+      }
+    ],
+    "target_seed_complete": true,
+    "target_seed_count": 5
+  },
+  "training_contract": {
+    "evaluation": "held-out evaluation metrics only; no threshold or model selection performed here",
+    "source": "verified notebooks 03-06 result bundles",
+    "thresholds": "loaded from validation-selected thresholds in each source bundle"
+  },
+  "upstream_protocol_pointer_sha256": "5256c3aeda7f7e619fd60d9530397af6a207c7a83d80c45cdd131e0d86fc2ee0"
+}

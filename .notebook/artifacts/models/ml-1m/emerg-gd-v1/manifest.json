@@ -1,0 +1,557 @@
+{
+  "artifacts": {
+    "diffusion_history": {
+      "path": "models/ml-1m/emerg-gd-v1/generations/20260717T025915-s4517-9a273c094aff/diffusion_history.csv",
+      "rows": 48,
+      "sha256": "3d92f092bd2497d5ce6c91b40c9cbd63fe5a18318f3a0e00b3f5367eeff99182"
+    },
+    "evaluation_metrics": {
+      "path": "models/ml-1m/emerg-gd-v1/generations/20260717T025915-s4517-9a273c094aff/evaluation_metrics.csv",
+      "rows": 4,
+      "sha256": "ba442e05d6d8884fe2ab98fd88b3c2464abe7613664feec705e973ad579d3c84"
+    },
+    "evaluation_predictions": {
+      "path": "models/ml-1m/emerg-gd-v1/generations/20260717T025915-s4517-9a273c094aff/evaluation_predictions.csv",
+      "rows": 230276,
+      "sha256": "3a2558005a85ab3e74ba2dc7f8aef10d6e90438ee94d63ad9dd23f5cf1cd9160"
+    },
+    "graph_diagnostics": {
+      "path": "models/ml-1m/emerg-gd-v1/generations/20260717T025915-s4517-9a273c094aff/graph_diagnostics.csv",
+      "rows": 4956,
+      "sha256": "ca37041da961fc52891cfbe18c738ec93cd58744bcffae68c027b34ef76db3a0"
+    },
+    "graph_diffusion_checkpoint": {
+      "path": "models/ml-1m/emerg-gd-v1/generations/20260717T025915-s4517-9a273c094aff/graph_diffusion.pt",
+      "sha256": "6cf23db15e51899ac2c024e36bbeb35e024e5cd7442eb57703e031c32d3350c6"
+    },
+    "paired_seed_metrics": {
+      "path": "models/ml-1m/emerg-gd-v1/generations/20260717T025915-s4517-9a273c094aff/paired_seed_metrics.csv",
+      "rows": 4,
+      "sha256": "91f70b32e4a1f8218a40117e907946435e17d1672611e23a2587095f2822a81f"
+    },
+    "pseudo_graph_stats": {
+      "path": "models/ml-1m/emerg-gd-v1/generations/20260717T025915-s4517-9a273c094aff/pseudo_graph_stats.csv",
+      "rows": 2556,
+      "sha256": "e5566849ba17dc489f27d22d248ec5027199ad9cffa13ef4d65683b2712e3a73"
+    },
+    "timing": {
+      "path": "models/ml-1m/emerg-gd-v1/generations/20260717T025915-s4517-9a273c094aff/timing.csv",
+      "rows": 3,
+      "sha256": "f27cf4d8761ef993f1c05d1c09117f19583d65315735096ee82585f98a9869fb"
+    },
+    "tuning_emerg_history": {
+      "path": "models/ml-1m/emerg-gd-v1/generations/20260717T025915-s4517-9a273c094aff/tuning_emerg_history.csv",
+      "rows": 4,
+      "sha256": "ad2e8a52eec348b6754b979d093e3341376c17c60ade4466347dea209d4602d0"
+    },
+    "validation_metrics": {
+      "path": "models/ml-1m/emerg-gd-v1/generations/20260717T025915-s4517-9a273c094aff/validation_metrics.csv",
+      "rows": 4,
+      "sha256": "574da3ca6bf68d8b26361661818a53429efff6a5c389822c8ff0861d51e8f704"
+    },
+    "validation_predictions": {
+      "path": "models/ml-1m/emerg-gd-v1/generations/20260717T025915-s4517-9a273c094aff/validation_predictions.csv",
+      "rows": 611048,
+      "sha256": "e8bbf76b71ff6eba610b5d0bed04b0670fd21c79aed651fe3831269f5a820c58"
+    },
+    "validation_thresholds": {
+      "path": "models/ml-1m/emerg-gd-v1/generations/20260717T025915-s4517-9a273c094aff/validation_thresholds.csv",
+      "rows": 4,
+      "sha256": "e95edc016b42f33e9e857973a45ad484e6a874ce5292be62ec5389648b546675"
+    }
+  },
+  "baseline_emerg": {
+    "bundle_id": "20260717T025339-s4517-40be8703c620",
+    "checkpoint_sha256": "bcd42566df6bf1fcd0cd5ecf1546710758dafdde953057e1b644955f5116a2b6"
+  },
+  "bundle_id": "20260717T025915-s4517-9a273c094aff",
+  "bundle_manifest": "models/ml-1m/emerg-gd-v1/generations/20260717T025915-s4517-9a273c094aff/manifest.json",
+  "checks": [
+    {
+      "check": "diffusion gradient flow",
+      "expected": "PASS with positive finite gradient norm",
+      "observed": {
+        "gradient_norm": 4.934298992156982,
+        "loss": 1.0865767002105713,
+        "status": "PASS"
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "validation predictions complete",
+      "expected": 611048,
+      "observed": 611048,
+      "status": "PASS"
+    },
+    {
+      "check": "evaluation predictions complete",
+      "expected": 230276,
+      "observed": 230276,
+      "status": "PASS"
+    },
+    {
+      "check": "phase thresholds complete",
+      "expected": [
+        "Cold",
+        "Warm A",
+        "Warm B",
+        "Warm C"
+      ],
+      "observed": [
+        "Cold",
+        "Warm A",
+        "Warm B",
+        "Warm C"
+      ],
+      "status": "PASS"
+    },
+    {
+      "check": "final train excludes evaluation items",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "all numerical outputs finite",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    }
+  ],
+  "created_at_utc": "2026-07-17T03:00:31.353515+00:00",
+  "gradient_check": {
+    "gradient_norm": 4.934298992156982,
+    "loss": 1.0865767002105713,
+    "status": "PASS"
+  },
+  "model_name": "EmerG+GD",
+  "model_schema_version": "emerg-graph-diffusion-v1",
+  "model_status": "PASS",
+  "output_schemas": {
+    "diffusion_history": {
+      "columns": [
+        "run_name",
+        "epoch",
+        "loss",
+        "noise_loss",
+        "reconstruction_loss",
+        "examples"
+      ],
+      "read_csv_dtypes": {
+        "epoch": "int64",
+        "examples": "int64",
+        "loss": "float64",
+        "noise_loss": "float64",
+        "reconstruction_loss": "float64",
+        "run_name": "string"
+      }
+    },
+    "evaluation_metrics": {
+      "columns": [
+        "split",
+        "phase",
+        "rows",
+        "positives",
+        "threshold",
+        "accuracy",
+        "precision",
+        "recall",
+        "f1",
+        "roc_auc",
+        "predicted_positive_rate",
+        "score_mean",
+        "score_std",
+        "tp",
+        "fp",
+        "fn",
+        "tn"
+      ],
+      "read_csv_dtypes": {
+        "accuracy": "float64",
+        "f1": "float64",
+        "fn": "int64",
+        "fp": "int64",
+        "phase": "string",
+        "positives": "int64",
+        "precision": "float64",
+        "predicted_positive_rate": "float64",
+        "recall": "float64",
+        "roc_auc": "float64",
+        "rows": "int64",
+        "score_mean": "float64",
+        "score_std": "float64",
+        "split": "string",
+        "threshold": "float64",
+        "tn": "int64",
+        "tp": "int64"
+      }
+    },
+    "evaluation_predictions": {
+      "columns": [
+        "phase",
+        "source_row",
+        "user_id",
+        "user_idx",
+        "item_id",
+        "item_idx",
+        "label",
+        "score",
+        "graph_ensemble_score_std",
+        "graph_sample_count"
+      ],
+      "read_csv_dtypes": {
+        "graph_ensemble_score_std": "float32",
+        "graph_sample_count": "int64",
+        "item_id": "int64",
+        "item_idx": "int64",
+        "label": "int8",
+        "phase": "string",
+        "score": "float32",
+        "source_row": "int64",
+        "user_id": "int64",
+        "user_idx": "int64"
+      }
+    },
+    "graph_diagnostics": {
+      "columns": [
+        "split",
+        "item_id",
+        "item_idx",
+        "phase",
+        "graph_sample_count",
+        "graph_mean",
+        "graph_std_within",
+        "graph_between_sample_std",
+        "graph_density_gt_0_5",
+        "graph_diag_mean",
+        "guidance_loss_mean",
+        "guidance_loss_last",
+        "sampling_seconds"
+      ],
+      "read_csv_dtypes": {
+        "graph_between_sample_std": "float64",
+        "graph_density_gt_0_5": "float64",
+        "graph_diag_mean": "float64",
+        "graph_mean": "float64",
+        "graph_sample_count": "int64",
+        "graph_std_within": "float64",
+        "guidance_loss_last": "float64",
+        "guidance_loss_mean": "float64",
+        "item_id": "int64",
+        "item_idx": "int64",
+        "phase": "string",
+        "sampling_seconds": "float64",
+        "split": "string"
+      }
+    },
+    "paired_seed_metrics": {
+      "columns": [
+        "split_emerg",
+        "phase",
+        "rows_emerg",
+        "positives_emerg",
+        "threshold_emerg",
+        "accuracy_emerg",
+        "precision_emerg",
+        "recall_emerg",
+        "f1_emerg",
+        "roc_auc_emerg",
+        "predicted_positive_rate_emerg",
+        "score_mean_emerg",
+        "score_std_emerg",
+        "tp_emerg",
+        "fp_emerg",
+        "fn_emerg",
+        "tn_emerg",
+        "config_name",
+        "split_emerg_gd",
+        "rows_emerg_gd",
+        "positives_emerg_gd",
+        "threshold_emerg_gd",
+        "accuracy_emerg_gd",
+        "precision_emerg_gd",
+        "recall_emerg_gd",
+        "f1_emerg_gd",
+        "roc_auc_emerg_gd",
+        "predicted_positive_rate_emerg_gd",
+        "score_mean_emerg_gd",
+        "score_std_emerg_gd",
+        "tp_emerg_gd",
+        "fp_emerg_gd",
+        "fn_emerg_gd",
+        "tn_emerg_gd",
+        "f1_delta",
+        "roc_auc_delta",
+        "accuracy_delta",
+        "precision_delta",
+        "recall_delta"
+      ],
+      "read_csv_dtypes": {
+        "accuracy_delta": "float64",
+        "accuracy_emerg": "float64",
+        "accuracy_emerg_gd": "float64",
+        "config_name": "string",
+        "f1_delta": "float64",
+        "f1_emerg": "float64",
+        "f1_emerg_gd": "float64",
+        "fn_emerg": "int64",
+        "fn_emerg_gd": "int64",
+        "fp_emerg": "int64",
+        "fp_emerg_gd": "int64",
+        "phase": "string",
+        "positives_emerg": "int64",
+        "positives_emerg_gd": "int64",
+        "precision_delta": "float64",
+        "precision_emerg": "float64",
+        "precision_emerg_gd": "float64",
+        "predicted_positive_rate_emerg": "float64",
+        "predicted_positive_rate_emerg_gd": "float64",
+        "recall_delta": "float64",
+        "recall_emerg": "float64",
+        "recall_emerg_gd": "float64",
+        "roc_auc_delta": "float64",
+        "roc_auc_emerg": "float64",
+        "roc_auc_emerg_gd": "float64",
+        "rows_emerg": "int64",
+        "rows_emerg_gd": "int64",
+        "score_mean_emerg": "float64",
+        "score_mean_emerg_gd": "float64",
+        "score_std_emerg": "float64",
+        "score_std_emerg_gd": "float64",
+        "split_emerg": "string",
+        "split_emerg_gd": "string",
+        "threshold_emerg": "float64",
+        "threshold_emerg_gd": "float64",
+        "tn_emerg": "int64",
+        "tn_emerg_gd": "int64",
+        "tp_emerg": "int64",
+        "tp_emerg_gd": "int64"
+      }
+    },
+    "pseudo_graph_stats": {
+      "columns": [
+        "item_idx",
+        "item_id",
+        "edge_logit_mean",
+        "edge_logit_std",
+        "edge_probability_mean",
+        "edge_probability_std",
+        "stage"
+      ],
+      "read_csv_dtypes": {
+        "edge_logit_mean": "float32",
+        "edge_logit_std": "float32",
+        "edge_probability_mean": "float32",
+        "edge_probability_std": "float32",
+        "item_id": "int64",
+        "item_idx": "int64",
+        "stage": "string"
+      }
+    },
+    "timing": {
+      "columns": [
+        "stage",
+        "seconds"
+      ],
+      "read_csv_dtypes": {
+        "seconds": "float64",
+        "stage": "string"
+      }
+    },
+    "tuning_emerg_history": {
+      "columns": [
+        "run_name",
+        "epoch",
+        "loss",
+        "examples"
+      ],
+      "read_csv_dtypes": {
+        "epoch": "int64",
+        "examples": "int64",
+        "loss": "float64",
+        "run_name": "string"
+      }
+    },
+    "validation_metrics": {
+      "columns": [
+        "split",
+        "phase",
+        "rows",
+        "positives",
+        "threshold",
+        "accuracy",
+        "precision",
+        "recall",
+        "f1",
+        "roc_auc",
+        "predicted_positive_rate",
+        "score_mean",
+        "score_std",
+        "tp",
+        "fp",
+        "fn",
+        "tn"
+      ],
+      "read_csv_dtypes": {
+        "accuracy": "float64",
+        "f1": "float64",
+        "fn": "int64",
+        "fp": "int64",
+        "phase": "string",
+        "positives": "int64",
+        "precision": "float64",
+        "predicted_positive_rate": "float64",
+        "recall": "float64",
+        "roc_auc": "float64",
+        "rows": "int64",
+        "score_mean": "float64",
+        "score_std": "float64",
+        "split": "string",
+        "threshold": "float64",
+        "tn": "int64",
+        "tp": "int64"
+      }
+    },
+    "validation_predictions": {
+      "columns": [
+        "phase",
+        "source_row",
+        "user_id",
+        "user_idx",
+        "item_id",
+        "item_idx",
+        "label",
+        "score",
+        "graph_ensemble_score_std",
+        "graph_sample_count"
+      ],
+      "read_csv_dtypes": {
+        "graph_ensemble_score_std": "float32",
+        "graph_sample_count": "int64",
+        "item_id": "int64",
+        "item_idx": "int64",
+        "label": "int8",
+        "phase": "string",
+        "score": "float32",
+        "source_row": "int64",
+        "user_id": "int64",
+        "user_idx": "int64"
+      }
+    },
+    "validation_thresholds": {
+      "columns": [
+        "split",
+        "phase",
+        "threshold",
+        "validation_best_f1"
+      ],
+      "read_csv_dtypes": {
+        "phase": "string",
+        "split": "string",
+        "threshold": "float64",
+        "validation_best_f1": "float64"
+      }
+    }
+  },
+  "phase_contract": {
+    "Cold": {
+      "adaptation_increment": [],
+      "graph_visible_support": []
+    },
+    "Warm A": {
+      "adaptation_increment": [
+        "warm_a"
+      ],
+      "graph_visible_support": [
+        "warm_a"
+      ]
+    },
+    "Warm B": {
+      "adaptation_increment": [
+        "warm_b"
+      ],
+      "continue_item_state_from": "Warm A",
+      "graph_visible_support": [
+        "warm_a",
+        "warm_b"
+      ]
+    },
+    "Warm C": {
+      "adaptation_increment": [
+        "warm_c"
+      ],
+      "continue_item_state_from": "Warm B",
+      "graph_visible_support": [
+        "warm_a",
+        "warm_b",
+        "warm_c"
+      ]
+    },
+    "query": "identical role=query rows in every phase"
+  },
+  "run_config": {
+    "clip_normalized_x0": 6.0,
+    "condition_fields": [
+      "release_year",
+      "genres",
+      "title"
+    ],
+    "denoiser_batch_size": 256,
+    "denoiser_epochs": 24,
+    "denoiser_hidden_dim": 192,
+    "denoiser_learning_rate": 0.001,
+    "denoiser_weight_decay": 1e-06,
+    "diffusion_timesteps": 64,
+    "edge_probability_epsilon": 0.0001,
+    "guidance_scale": 0.2,
+    "prediction_policy": "mean probability across independently initialized graph samples",
+    "reconstruction_weight": 0.1,
+    "sampler_steps": 6,
+    "samples_per_item": 4,
+    "schema_version": "emerg-graph-diffusion-v1",
+    "seed": 4517,
+    "selected_emerg_config": {
+      "batch_size": 4096,
+      "embedding_dim": 32,
+      "epoch_sample_rows": 262144,
+      "epochs": 4,
+      "gnn_layers": 2,
+      "hidden_dim": 96,
+      "learning_rate": 0.001,
+      "warm_learning_rate": 0.01,
+      "warm_steps": 3,
+      "weight_decay": 1e-06
+    },
+    "strategy": "two-stage conditional continuous-edge DDPM with DDIM-style guided sampling",
+    "time_embedding_dim": 32,
+    "warm_support_policy": "cumulative support: A; A+B; A+B+C"
+  },
+  "summary": {
+    "evaluation_prediction_rows": 230276,
+    "mean_evaluation_auc": 0.7304521419694121,
+    "mean_evaluation_f1": 0.6201646029453022,
+    "mean_paired_f1_delta": -0.04695654545907668
+  },
+  "threshold_by_phase": {
+    "Cold": 0.3296051621437073,
+    "Warm A": 0.33181196451187134,
+    "Warm B": 0.3308172821998596,
+    "Warm C": 0.3264811038970947
+  },
+  "training_contract": {
+    "conditioning": [
+      "release_year",
+      "genres",
+      "title"
+    ],
+    "pseudo_targets": "converged EmerG continuous graphs harvested only from the active training split",
+    "sampling": "short deterministic DDIM-style chain with independent Gaussian initial states",
+    "thresholds": "selected on validation query rows only and frozen for evaluation",
+    "warm_guidance": "cumulative support: A; A+B; A+B+C"
+  },
+  "upstream_protocol": {
+    "bundle_id": "20260716T183148-e7b92de81a1e",
+    "pointer_sha256": "5256c3aeda7f7e619fd60d9530397af6a207c7a83d80c45cdd131e0d86fc2ee0",
+    "schema_version": "ml1m-coldstart-v1"
+  }
+}

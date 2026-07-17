@@ -1,0 +1,33 @@
+category,check,status,observed,expected
+environment,required dependencies,PASS,[],[]
+source,MovieLens-1M source found,PASS,"{'kind': 'zip', 'origin': 'input root', 'name': 'ml-1m.zip'}",official source
+source,required source members,PASS,"['ratings.dat', 'users.dat', 'movies.dat', 'README']","['ratings.dat', 'users.dat', 'movies.dat', 'README']"
+source,README schema authority,PASS,True,True
+source,official archive identity,PASS,"{'archive_md5': 'c4d9eecfca2ab87c1945afe126590906', 'members_valid': True}",trusted archive or exact trusted member fingerprints
+parsing,all canonical tables parsed,PASS,,no error
+release fingerprint,ratings row count,PASS,1000209,1000209
+missingness,ratings missing values,PASS,0,0
+release fingerprint,users row count,PASS,6040,6040
+missingness,users missing values,PASS,0,0
+release fingerprint,items row count,PASS,3883,3883
+missingness,items missing values,PASS,0,0
+keys,unique user primary key,PASS,0,0
+keys,unique item primary key,PASS,0,0
+keys,unique user-item ratings,PASS,0,0
+ranges,user ID range,PASS,"(1, 6040)","(1, 6040)"
+ranges,item ID range,PASS,"(1, 3952)","(1, 3952)"
+ranges,whole-star rating values,PASS,"[1, 2, 3, 4, 5]","[1, 2, 3, 4, 5]"
+ranges,nonnegative Unix timestamps,PASS,956703932,>= 0
+ranges,timestamps parse as UTC,PASS,0,0
+ranges,documented gender codes,PASS,"['F', 'M']","['F', 'M']"
+ranges,documented age codes,PASS,"[1, 18, 25, 35, 45, 50, 56]","[1, 18, 25, 35, 45, 50, 56]"
+ranges,documented occupation codes,PASS,"[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]","[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]"
+ranges,documented genre values,PASS,[],[]
+references,all rated users have metadata,PASS,0,0
+references,all rated items have metadata,PASS,0,0
+coverage,every metadata user has ratings,PASS,6040,6040
+coverage,at least 20 ratings per user,PASS,20,>= 20
+content,nonempty titles,PASS,0,0
+content,nonempty genres,PASS,0,0
+content,nonempty ZIP codes,PASS,0,0
+derived,release year parsed,PASS,0,0

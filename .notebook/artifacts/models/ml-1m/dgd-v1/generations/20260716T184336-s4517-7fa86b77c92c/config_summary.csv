@@ -1,0 +1,3 @@
+config_name,mean_validation_f1,mean_validation_auc,training_seconds,embedding_dim,hidden_dim,gnn_layers,learning_rate,warm_learning_rate,weight_decay,sparsemax_scale,epochs,epoch_sample_rows,batch_size,warm_steps
+cfg02_G3_D32,0.7899023639486684,0.754565507088052,1.875920763995964,32,96,3,0.001,0.01,1e-06,5.0,4,262144,4096,3
+cfg01_G2_D16,0.7884984642618575,0.7496680963804574,1.5342184840119444,16,64,2,0.001,0.01,1e-06,5.0,4,262144,4096,3
