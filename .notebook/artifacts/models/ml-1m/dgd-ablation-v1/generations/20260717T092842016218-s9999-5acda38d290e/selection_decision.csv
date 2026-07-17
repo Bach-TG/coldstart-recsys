@@ -1,0 +1,2 @@
+advance_to_multiseed,selection_metric,selection_policy,uses_evaluation_for_selection
+emerg_exact_topk,mean_validation_f1,advance the variant with highest mean validation F1; evaluation metrics are reported only,False

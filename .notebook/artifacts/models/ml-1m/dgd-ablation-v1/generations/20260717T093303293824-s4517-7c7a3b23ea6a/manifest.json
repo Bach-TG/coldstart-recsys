@@ -1,0 +1,667 @@
+{
+  "ablation_schema_version": "dgd-ablation-v1",
+  "ablation_status": "PASS",
+  "artifacts": {
+    "ablation_matrix": {
+      "path": "models/ml-1m/dgd-ablation-v1/generations/20260717T093303293824-s4517-7c7a3b23ea6a/ablation_matrix.csv",
+      "rows": 4,
+      "sha256": "796be5529b06045a33871b03feb9133b9a205a5a1a2438192fcf20f234c554cc"
+    },
+    "ablation_summary": {
+      "path": "models/ml-1m/dgd-ablation-v1/generations/20260717T093303293824-s4517-7c7a3b23ea6a/ablation_summary.csv",
+      "rows": 4,
+      "sha256": "10404107c4a5f3aad53ee1d4ee20e3da068819e217f6d5952a8ebca31c8a4d98"
+    },
+    "config_summary": {
+      "path": "models/ml-1m/dgd-ablation-v1/generations/20260717T093303293824-s4517-7c7a3b23ea6a/config_summary.csv",
+      "rows": 4,
+      "sha256": "ca2a6a724f9b02ed15833e57094204f34d95d118c484c045f5823d7359a4dc57"
+    },
+    "diffusion_weights": {
+      "path": "models/ml-1m/dgd-ablation-v1/generations/20260717T093303293824-s4517-7c7a3b23ea6a/diffusion_weights.csv",
+      "rows": 12,
+      "sha256": "819e07f003feffb8284bdebf90dd6e6144165331585d91c80f3a7c804581545f"
+    },
+    "evaluation_metrics": {
+      "path": "models/ml-1m/dgd-ablation-v1/generations/20260717T093303293824-s4517-7c7a3b23ea6a/evaluation_metrics.csv",
+      "rows": 16,
+      "sha256": "841e975005e1488cd2b5b834c75f500320345d6671d63fce0d919d5ec8b76c77"
+    },
+    "evaluation_predictions": {
+      "path": "models/ml-1m/dgd-ablation-v1/generations/20260717T093303293824-s4517-7c7a3b23ea6a/evaluation_predictions.csv",
+      "rows": 921104,
+      "sha256": "5fef386f4dfea562ae22541ee45fcb09bbfe80c0962d90201819e916a79cec0e"
+    },
+    "feature_contract": {
+      "path": "models/ml-1m/dgd-ablation-v1/generations/20260717T093303293824-s4517-7c7a3b23ea6a/feature_contract.json",
+      "sha256": "07e2b58544c1ff5164e521a67a4804ae0111561783f06103bf9cfd4cf176911c"
+    },
+    "final_model_checkpoints": {
+      "path": "models/ml-1m/dgd-ablation-v1/generations/20260717T093303293824-s4517-7c7a3b23ea6a/final_models.pt",
+      "sha256": "72bb7596ea4a2fd654db19cbfd84bbce8b6edc9ad565d560846325b5f40c99c2"
+    },
+    "gradient_checks": {
+      "path": "models/ml-1m/dgd-ablation-v1/generations/20260717T093303293824-s4517-7c7a3b23ea6a/gradient_checks.csv",
+      "rows": 4,
+      "sha256": "4c3f96be8f25b93b32fa9068f42c6ec40bacd7030438644fd1052f2bf372a1c7"
+    },
+    "selection_decision": {
+      "path": "models/ml-1m/dgd-ablation-v1/generations/20260717T093303293824-s4517-7c7a3b23ea6a/selection_decision.csv",
+      "rows": 1,
+      "sha256": "ed06c3c86fe27e133d520404331185d996d4389f731d58c41d2ba7c1c0e5cc07"
+    },
+    "structural_diagnostics": {
+      "path": "models/ml-1m/dgd-ablation-v1/generations/20260717T093303293824-s4517-7c7a3b23ea6a/structural_diagnostics.csv",
+      "rows": 19824,
+      "sha256": "b9158dee2325893b9220451a6bd7400efac52a1d9ff1e1f3fa7179c9d4517eb2"
+    },
+    "training_history": {
+      "path": "models/ml-1m/dgd-ablation-v1/generations/20260717T093303293824-s4517-7c7a3b23ea6a/training_history.csv",
+      "rows": 24,
+      "sha256": "e37afb332b7b25e348a968e1a479723ef25fa7aee060e470f18b211b29681f0e"
+    },
+    "validation_metrics": {
+      "path": "models/ml-1m/dgd-ablation-v1/generations/20260717T093303293824-s4517-7c7a3b23ea6a/validation_metrics.csv",
+      "rows": 16,
+      "sha256": "fcdc703cf95a0eca8cf92d0a326ad925cd0374ed32a405f82c30e33e2c29b613"
+    },
+    "validation_summary": {
+      "path": "models/ml-1m/dgd-ablation-v1/generations/20260717T093303293824-s4517-7c7a3b23ea6a/validation_summary.csv",
+      "rows": 4,
+      "sha256": "d683db8b68eab937e936b6990889b03c95d058d6138591b24fc0e6d8d23d2116"
+    },
+    "validation_thresholds": {
+      "path": "models/ml-1m/dgd-ablation-v1/generations/20260717T093303293824-s4517-7c7a3b23ea6a/validation_thresholds.csv",
+      "rows": 16,
+      "sha256": "f493a55953de1fabe56bc3537ed9c16922f03387fb743990e4546d5fc6704bb1"
+    }
+  },
+  "bundle_id": "20260717T093303293824-s4517-7c7a3b23ea6a",
+  "bundle_manifest": "models/ml-1m/dgd-ablation-v1/generations/20260717T093303293824-s4517-7c7a3b23ea6a/manifest.json",
+  "checks": [
+    {
+      "check": "protocol schema",
+      "expected": "ml1m-coldstart-v1",
+      "observed": "ml1m-coldstart-v1",
+      "status": "PASS"
+    },
+    {
+      "check": "manifest target seed",
+      "expected": 4517,
+      "observed": 4517,
+      "status": "PASS"
+    },
+    {
+      "check": "all gradient checks pass",
+      "expected": [
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS"
+      ],
+      "observed": [
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS"
+      ],
+      "status": "PASS"
+    },
+    {
+      "check": "variants complete",
+      "expected": [
+        "emerg_exact_topk",
+        "exact_sparsemax",
+        "full_dgd",
+        "mix_topk"
+      ],
+      "observed": [
+        "emerg_exact_topk",
+        "exact_sparsemax",
+        "full_dgd",
+        "mix_topk"
+      ],
+      "status": "PASS"
+    },
+    {
+      "check": "controlled tuning seed across variants",
+      "expected": [
+        5517,
+        5517,
+        5517,
+        5517
+      ],
+      "observed": [
+        5517,
+        5517,
+        5517,
+        5517
+      ],
+      "status": "PASS"
+    },
+    {
+      "check": "controlled final seed across variants",
+      "expected": [
+        14517,
+        14517,
+        14517,
+        14517
+      ],
+      "observed": [
+        14517,
+        14517,
+        14517,
+        14517
+      ],
+      "status": "PASS"
+    },
+    {
+      "check": "validation predictions complete",
+      "expected": 2444192,
+      "observed": 2444192,
+      "status": "PASS"
+    },
+    {
+      "check": "evaluation predictions complete",
+      "expected": 921104,
+      "observed": 921104,
+      "status": "PASS"
+    },
+    {
+      "check": "thresholds complete",
+      "expected": 16,
+      "observed": 16,
+      "status": "PASS"
+    },
+    {
+      "check": "training losses finite",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "validation prediction scores finite",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "evaluation prediction scores finite",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "validation thresholds finite",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "validation and evaluation metrics finite",
+      "expected": {
+        "evaluation": true,
+        "validation": true
+      },
+      "observed": {
+        "evaluation": true,
+        "validation": true
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "final train excludes evaluation items",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "feature contract has PAD/UNK",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "selection matches validation summary",
+      "expected": "full_dgd",
+      "observed": "full_dgd",
+      "status": "PASS"
+    },
+    {
+      "check": "selection frozen before evaluation",
+      "expected": [
+        {
+          "advance_to_multiseed": "full_dgd",
+          "selection_metric": "mean_validation_f1",
+          "selection_policy": "advance the variant with highest mean validation F1; evaluation metrics are reported only",
+          "uses_evaluation_for_selection": false
+        }
+      ],
+      "observed": [
+        {
+          "advance_to_multiseed": "full_dgd",
+          "selection_metric": "mean_validation_f1",
+          "selection_policy": "advance the variant with highest mean validation F1; evaluation metrics are reported only",
+          "uses_evaluation_for_selection": false
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "check": "selection avoids evaluation metrics",
+      "expected": false,
+      "observed": false,
+      "status": "PASS"
+    },
+    {
+      "check": "state dicts complete",
+      "expected": [
+        "emerg_exact_topk",
+        "exact_sparsemax",
+        "full_dgd",
+        "mix_topk"
+      ],
+      "observed": [
+        "emerg_exact_topk",
+        "exact_sparsemax",
+        "full_dgd",
+        "mix_topk"
+      ],
+      "status": "PASS"
+    }
+  ],
+  "created_at_utc": "2026-07-17T09:33:04.572077+00:00",
+  "feature_contract_sha256": "07e2b58544c1ff5164e521a67a4804ae0111561783f06103bf9cfd4cf176911c",
+  "output_schemas": {
+    "ablation_matrix": {
+      "columns": [
+        "variant",
+        "mix_orders",
+        "sparsifier",
+        "description"
+      ],
+      "read_csv_dtypes": {
+        "description": "string",
+        "mix_orders": "bool",
+        "sparsifier": "string",
+        "variant": "string"
+      }
+    },
+    "ablation_summary": {
+      "columns": [
+        "variant",
+        "mean_validation_f1",
+        "mean_validation_auc",
+        "mean_evaluation_f1",
+        "mean_evaluation_auc"
+      ],
+      "read_csv_dtypes": {
+        "mean_evaluation_auc": "float64",
+        "mean_evaluation_f1": "float64",
+        "mean_validation_auc": "float64",
+        "mean_validation_f1": "float64",
+        "variant": "string"
+      }
+    },
+    "config_summary": {
+      "columns": [
+        "variant",
+        "embedding_dim",
+        "hidden_dim",
+        "gnn_layers",
+        "learning_rate",
+        "warm_learning_rate",
+        "weight_decay",
+        "sparsemax_scale",
+        "topk_edges",
+        "epochs",
+        "epoch_sample_rows",
+        "batch_size",
+        "warm_steps",
+        "mix_orders",
+        "sparsifier",
+        "description"
+      ],
+      "read_csv_dtypes": {
+        "batch_size": "int64",
+        "description": "string",
+        "embedding_dim": "int64",
+        "epoch_sample_rows": "int64",
+        "epochs": "int64",
+        "gnn_layers": "int64",
+        "hidden_dim": "int64",
+        "learning_rate": "float64",
+        "mix_orders": "bool",
+        "sparsemax_scale": "float64",
+        "sparsifier": "string",
+        "topk_edges": "int64",
+        "variant": "string",
+        "warm_learning_rate": "float64",
+        "warm_steps": "int64",
+        "weight_decay": "float64"
+      }
+    },
+    "diffusion_weights": {
+      "columns": [
+        "variant",
+        "layer",
+        "power",
+        "weight"
+      ],
+      "read_csv_dtypes": {
+        "layer": "int64",
+        "power": "int64",
+        "variant": "string",
+        "weight": "float64"
+      }
+    },
+    "evaluation_metrics": {
+      "columns": [
+        "split",
+        "variant",
+        "phase",
+        "rows",
+        "positives",
+        "threshold",
+        "accuracy",
+        "precision",
+        "recall",
+        "f1",
+        "roc_auc",
+        "predicted_positive_rate",
+        "score_mean",
+        "score_std",
+        "tp",
+        "fp",
+        "fn",
+        "tn"
+      ],
+      "read_csv_dtypes": {
+        "accuracy": "float64",
+        "f1": "float64",
+        "fn": "int64",
+        "fp": "int64",
+        "phase": "string",
+        "positives": "int64",
+        "precision": "float64",
+        "predicted_positive_rate": "float64",
+        "recall": "float64",
+        "roc_auc": "float64",
+        "rows": "int64",
+        "score_mean": "float64",
+        "score_std": "float64",
+        "split": "string",
+        "threshold": "float64",
+        "tn": "int64",
+        "tp": "int64",
+        "variant": "string"
+      }
+    },
+    "evaluation_predictions": {
+      "columns": [
+        "variant",
+        "phase",
+        "source_row",
+        "user_id",
+        "user_idx",
+        "item_id",
+        "item_idx",
+        "label",
+        "score"
+      ],
+      "read_csv_dtypes": {
+        "item_id": "int64",
+        "item_idx": "int64",
+        "label": "int8",
+        "phase": "string",
+        "score": "float32",
+        "source_row": "int64",
+        "user_id": "int64",
+        "user_idx": "int64",
+        "variant": "string"
+      }
+    },
+    "gradient_checks": {
+      "columns": [
+        "variant",
+        "graph_generator_grad_norm",
+        "diffusion_grad_norm",
+        "requires_diffusion_grad",
+        "row_sum_error",
+        "sparse_fraction",
+        "status"
+      ],
+      "read_csv_dtypes": {
+        "diffusion_grad_norm": "float64",
+        "graph_generator_grad_norm": "float64",
+        "requires_diffusion_grad": "bool",
+        "row_sum_error": "float64",
+        "sparse_fraction": "float64",
+        "status": "string",
+        "variant": "string"
+      }
+    },
+    "selection_decision": {
+      "columns": [
+        "advance_to_multiseed",
+        "selection_metric",
+        "selection_policy",
+        "uses_evaluation_for_selection"
+      ],
+      "read_csv_dtypes": {
+        "advance_to_multiseed": "string",
+        "selection_metric": "string",
+        "selection_policy": "string",
+        "uses_evaluation_for_selection": "bool"
+      }
+    },
+    "structural_diagnostics": {
+      "columns": [
+        "split",
+        "variant",
+        "item_id",
+        "item_idx",
+        "phase",
+        "base_graph_mean",
+        "graph_density_gt_1e_6",
+        "graph_row_sum_error",
+        "local_delta_norm",
+        "last_warm_loss",
+        "tuning_seconds",
+        "final_training_seconds",
+        "device"
+      ],
+      "read_csv_dtypes": {
+        "base_graph_mean": "float64",
+        "device": "string",
+        "final_training_seconds": "float64",
+        "graph_density_gt_1e_6": "float64",
+        "graph_row_sum_error": "float64",
+        "item_id": "int64",
+        "item_idx": "int64",
+        "last_warm_loss": "float64",
+        "local_delta_norm": "float64",
+        "phase": "string",
+        "split": "string",
+        "tuning_seconds": "float64",
+        "variant": "string"
+      }
+    },
+    "training_history": {
+      "columns": [
+        "variant",
+        "run_name",
+        "epoch",
+        "loss",
+        "examples"
+      ],
+      "read_csv_dtypes": {
+        "epoch": "int64",
+        "examples": "int64",
+        "loss": "float64",
+        "run_name": "string",
+        "variant": "string"
+      }
+    },
+    "validation_metrics": {
+      "columns": [
+        "split",
+        "variant",
+        "phase",
+        "rows",
+        "positives",
+        "threshold",
+        "accuracy",
+        "precision",
+        "recall",
+        "f1",
+        "roc_auc",
+        "predicted_positive_rate",
+        "score_mean",
+        "score_std",
+        "tp",
+        "fp",
+        "fn",
+        "tn"
+      ],
+      "read_csv_dtypes": {
+        "accuracy": "float64",
+        "f1": "float64",
+        "fn": "int64",
+        "fp": "int64",
+        "phase": "string",
+        "positives": "int64",
+        "precision": "float64",
+        "predicted_positive_rate": "float64",
+        "recall": "float64",
+        "roc_auc": "float64",
+        "rows": "int64",
+        "score_mean": "float64",
+        "score_std": "float64",
+        "split": "string",
+        "threshold": "float64",
+        "tn": "int64",
+        "tp": "int64",
+        "variant": "string"
+      }
+    },
+    "validation_summary": {
+      "columns": [
+        "variant",
+        "mean_validation_f1",
+        "mean_validation_auc"
+      ],
+      "read_csv_dtypes": {
+        "mean_validation_auc": "float64",
+        "mean_validation_f1": "float64",
+        "variant": "string"
+      }
+    },
+    "validation_thresholds": {
+      "columns": [
+        "split",
+        "variant",
+        "phase",
+        "threshold",
+        "validation_best_f1"
+      ],
+      "read_csv_dtypes": {
+        "phase": "string",
+        "split": "string",
+        "threshold": "float64",
+        "validation_best_f1": "float64",
+        "variant": "string"
+      }
+    }
+  },
+  "run_config": {
+    "fast_dev_run": false,
+    "field_order": [
+      "user_id",
+      "gender",
+      "age",
+      "occupation",
+      "zip_code",
+      "item_id",
+      "release_year",
+      "genres",
+      "title"
+    ],
+    "item_graph_fields": [
+      "item_id",
+      "release_year",
+      "genres",
+      "title"
+    ],
+    "max_genre_tokens": 6,
+    "max_title_tokens": 8,
+    "phase_order": [
+      "Cold",
+      "Warm A",
+      "Warm B",
+      "Warm C"
+    ],
+    "schema_version": "dgd-ablation-v1",
+    "seed": 4517,
+    "selection_rule": "advance the variant with highest mean validation F1; evaluation metrics are reported only",
+    "shared_model_config": {
+      "batch_size": 4096,
+      "embedding_dim": 16,
+      "epoch_sample_rows": 196608,
+      "epochs": 3,
+      "gnn_layers": 2,
+      "hidden_dim": 64,
+      "learning_rate": 0.001,
+      "sparsemax_scale": 5.0,
+      "topk_edges": 4,
+      "warm_learning_rate": 0.01,
+      "warm_steps": 2,
+      "weight_decay": 1e-06
+    },
+    "variants": [
+      {
+        "description": "Exact graph powers with hard Top-K selection; no learnable diffusion.",
+        "mix_orders": false,
+        "sparsifier": "topk",
+        "variant": "emerg_exact_topk"
+      },
+      {
+        "description": "Learnable graph-power mixing with hard Top-K selection.",
+        "mix_orders": true,
+        "sparsifier": "topk",
+        "variant": "mix_topk"
+      },
+      {
+        "description": "Exact graph powers with differentiable row-wise sparsemax.",
+        "mix_orders": false,
+        "sparsifier": "sparsemax",
+        "variant": "exact_sparsemax"
+      },
+      {
+        "description": "Learnable graph-power mixing with differentiable row-wise sparsemax.",
+        "mix_orders": true,
+        "sparsifier": "sparsemax",
+        "variant": "full_dgd"
+      }
+    ]
+  },
+  "run_config_sha256": "fbe2df140e505af0689dab0e5eec242cb4766021b3d5224cfcc32ef3d93bef78",
+  "summary": {
+    "advance_to_multiseed": "full_dgd",
+    "evaluation_prediction_rows": 921104,
+    "mean_validation_auc": 0.7447046553548458,
+    "mean_validation_f1": 0.7866172055814582,
+    "variants": 4
+  },
+  "training_contract": {
+    "features": "same tuning-fit side-feature encoders across all variants",
+    "protocol": "notebook 02 ml1m-coldstart-v1",
+    "selection": "advance the variant with highest mean validation F1; evaluation metrics are reported only",
+    "thresholds": "selected on validation query rows only, per variant and phase"
+  },
+  "upstream_protocol": {
+    "bundle_id": "20260716T183148-e7b92de81a1e",
+    "pointer_sha256": "5256c3aeda7f7e619fd60d9530397af6a207c7a83d80c45cdd131e0d86fc2ee0",
+    "schema_version": "ml1m-coldstart-v1"
+  }
+}

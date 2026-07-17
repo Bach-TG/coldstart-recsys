@@ -1,0 +1,13 @@
+variant,layer,power,weight
+emerg_exact_topk,1,1,1.0
+emerg_exact_topk,2,1,0.0
+emerg_exact_topk,2,2,1.0
+mix_topk,1,1,1.0
+mix_topk,2,1,0.5412945747375488
+mix_topk,2,2,0.45870542526245117
+exact_sparsemax,1,1,1.0
+exact_sparsemax,2,1,0.0
+exact_sparsemax,2,2,1.0
+full_dgd,1,1,1.0
+full_dgd,2,1,0.5452258586883545
+full_dgd,2,2,0.4547742009162903

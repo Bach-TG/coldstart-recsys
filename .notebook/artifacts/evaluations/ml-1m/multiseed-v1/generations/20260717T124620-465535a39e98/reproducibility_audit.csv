@@ -1,0 +1,14 @@
+check,status,observed,expected,severity
+required model families present,PASS,"['dgd', 'dgd_ablation', 'emerg', 'lightgcn']","['dgd', 'dgd_ablation', 'emerg', 'lightgcn']",ERROR
+protocol schema,PASS,['ml1m-coldstart-v1'],['ml1m-coldstart-v1'],ERROR
+single protocol identity,PASS,['5256c3aeda7f7e619fd60d9530397af6a207c7a83d80c45cdd131e0d86fc2ee0'],one nonempty protocol pointer sha256,ERROR
+phase coverage,PASS,"['Cold', 'Warm A', 'Warm B', 'Warm C']","['Cold', 'Warm A', 'Warm B', 'Warm C']",ERROR
+metric rows unique,PASS,80,80,ERROR
+threshold rows unique,PASS,80,80,ERROR
+target run-phase coverage,PASS,"{'runs': 20, 'metric_rows': 80, 'threshold_rows': 80}","{'runs': 20, 'metric_rows': 80, 'threshold_rows': 80}",WARN
+non-target seeds excluded from metrics,PASS,[],[],ERROR
+prediction artifacts verified,PASS,20,20,ERROR
+source model quality clean,WARN,"[{'family': 'lightgcn', 'model_label': 'LightGCN', 'seed': 2025, 'bundle_id': '20260716T183339-s2025-a370f5a1659c'}, {'family': 'lightgcn', 'model_label': 'LightGCN', 'seed': 3407, 'bundle_id': '20260716T183408-s3407-d3c5f4a86f19'}, {'family': 'lightgcn', 'model_label': 'LightGCN', 'seed': 4517, 'bundle_id': '20260716T183419-s4517-388725ed3236'}, {'family': 'lightgcn', 'model_label': 'LightGCN', 'seed': 7788, 'bundle_id': '20260716T183349-s7788-055a93bf6705'}, {'family': 'lightgcn', 'model_label': 'LightGCN', 'seed': 9999, 'bundle_id': '20260716T183359-s9999-6cc7ff772669'}]",no source WARN runs,WARN
+selected ablation stable,PASS,['full_dgd'],one validation-selected ablation variant across seeds,WARN
+target seeds complete,PASS,{},no missing target runs or phases,WARN
+manifest discovery clean,PASS,[],no discovery errors,WARN

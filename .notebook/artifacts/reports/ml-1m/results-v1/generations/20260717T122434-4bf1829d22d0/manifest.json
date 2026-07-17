@@ -1,0 +1,230 @@
+{
+  "artifacts": {
+    "ablation_selection": {
+      "path": "reports/ml-1m/results-v1/generations/20260717T122434-4bf1829d22d0/ablation_selection.csv",
+      "rows": 5,
+      "sha256": "247621a1646f71f9af9e512cac488b476f81fd35b44d46e92105e30512a3c23d"
+    },
+    "f1_by_phase": {
+      "path": "reports/ml-1m/results-v1/generations/20260717T122434-4bf1829d22d0/f1_by_phase.png",
+      "sha256": "b6b4b0a0b9be6adff98606fb298c826730cb1400fcfcf0fefd958428e9bae9d4"
+    },
+    "findings": {
+      "path": "reports/ml-1m/results-v1/generations/20260717T122434-4bf1829d22d0/findings.csv",
+      "rows": 5,
+      "sha256": "0a53c203bc64b72fb16570601d22254542e7202c798cb1e58e31c25b3464b4f5"
+    },
+    "findings_markdown": {
+      "path": "reports/ml-1m/results-v1/generations/20260717T122434-4bf1829d22d0/findings.md",
+      "sha256": "c9416a7a847cd85f378364262ce2a7a1bc5ba29df65895cf0300b74dcbb86148"
+    },
+    "main_comparison": {
+      "path": "reports/ml-1m/results-v1/generations/20260717T122434-4bf1829d22d0/main_comparison.csv",
+      "rows": 16,
+      "sha256": "acedc0d43c6956d61090a73d1c3aaacb1dd5befc1eaeee9c9fb7a5e8ba83b159"
+    },
+    "paired_deltas_vs_dgd": {
+      "path": "reports/ml-1m/results-v1/generations/20260717T122434-4bf1829d22d0/paired_deltas_vs_dgd.csv",
+      "rows": 24,
+      "sha256": "5bd9ef02d25e95294b7775c37d84a8ba5b9fd7dde842b6333868a16f77ee7241"
+    },
+    "phase_winners": {
+      "path": "reports/ml-1m/results-v1/generations/20260717T122434-4bf1829d22d0/phase_winners.csv",
+      "rows": 4,
+      "sha256": "a1d875dae7ecac01f3d7e0cf12d6ef667fcf43b0214c1b2b5e898744fb6dcbd0"
+    },
+    "roc_auc_by_phase": {
+      "path": "reports/ml-1m/results-v1/generations/20260717T122434-4bf1829d22d0/roc_auc_by_phase.png",
+      "sha256": "7e528afb85dbb241d3de3f482a5155ffae74751cc280fa284510f027e8f10d4e"
+    }
+  },
+  "bundle_id": "20260717T122434-4bf1829d22d0",
+  "bundle_manifest": "reports/ml-1m/results-v1/generations/20260717T122434-4bf1829d22d0/manifest.json",
+  "checks": [
+    {
+      "check": "upstream schema",
+      "expected": "multiseed-evaluation-v1",
+      "observed": "multiseed-evaluation-v1",
+      "severity": "ERROR",
+      "status": "PASS"
+    },
+    {
+      "check": "no upstream blocking errors",
+      "expected": "no ERROR",
+      "observed": {
+        "PASS": 12,
+        "WARN": 1
+      },
+      "severity": "ERROR",
+      "status": "PASS"
+    },
+    {
+      "check": "coverage complete",
+      "expected": "COMPLETE",
+      "observed": "COMPLETE",
+      "severity": "WARN",
+      "status": "PASS"
+    },
+    {
+      "check": "upstream status clean",
+      "expected": "PASS",
+      "observed": "WARN",
+      "severity": "WARN",
+      "status": "WARN"
+    },
+    {
+      "check": "main table nonempty",
+      "expected": "> 0",
+      "observed": 16,
+      "severity": "ERROR",
+      "status": "PASS"
+    },
+    {
+      "check": "figures generated",
+      "expected": [
+        "f1_by_phase",
+        "roc_auc_by_phase"
+      ],
+      "observed": [
+        "f1_by_phase",
+        "roc_auc_by_phase"
+      ],
+      "severity": "ERROR",
+      "status": "PASS"
+    },
+    {
+      "check": "findings generated",
+      "expected": "> 0",
+      "observed": 5,
+      "severity": "ERROR",
+      "status": "PASS"
+    }
+  ],
+  "coverage_status": "COMPLETE",
+  "created_at_utc": "2026-07-17T12:24:34.404624+00:00",
+  "output_schemas": {
+    "ablation_selection": {
+      "columns": [
+        "seed",
+        "model_label",
+        "selected_variant",
+        "source_status",
+        "bundle_id"
+      ],
+      "read_csv_dtypes": {
+        "bundle_id": "string",
+        "model_label": "string",
+        "seed": "int64",
+        "selected_variant": "string",
+        "source_status": "string"
+      }
+    },
+    "findings": {
+      "columns": [
+        "topic",
+        "finding",
+        "evidence"
+      ],
+      "read_csv_dtypes": {
+        "evidence": "string",
+        "finding": "string",
+        "topic": "string"
+      }
+    },
+    "main_comparison": {
+      "columns": [
+        "family",
+        "model_label",
+        "phase",
+        "seed_count",
+        "target_seed_count_observed",
+        "target_seed_count_met",
+        "f1_mean",
+        "f1_std",
+        "f1_sem",
+        "f1_report",
+        "roc_auc_mean",
+        "roc_auc_std",
+        "roc_auc_sem",
+        "roc_auc_report"
+      ],
+      "read_csv_dtypes": {
+        "f1_mean": "float64",
+        "f1_report": "string",
+        "f1_sem": "float64",
+        "f1_std": "float64",
+        "family": "string",
+        "model_label": "string",
+        "phase": "string",
+        "roc_auc_mean": "float64",
+        "roc_auc_report": "string",
+        "roc_auc_sem": "float64",
+        "roc_auc_std": "float64",
+        "seed_count": "int64",
+        "target_seed_count_met": "bool",
+        "target_seed_count_observed": "int64"
+      }
+    },
+    "paired_deltas_vs_dgd": {
+      "columns": [
+        "phase",
+        "metric",
+        "comparison",
+        "seed_count",
+        "mean_delta",
+        "std_delta",
+        "min_delta",
+        "max_delta"
+      ],
+      "read_csv_dtypes": {
+        "comparison": "string",
+        "max_delta": "float64",
+        "mean_delta": "float64",
+        "metric": "string",
+        "min_delta": "float64",
+        "phase": "string",
+        "seed_count": "int64",
+        "std_delta": "float64"
+      }
+    },
+    "phase_winners": {
+      "columns": [
+        "phase",
+        "model_label",
+        "seed_count",
+        "f1_mean",
+        "roc_auc_mean"
+      ],
+      "read_csv_dtypes": {
+        "f1_mean": "float64",
+        "model_label": "string",
+        "phase": "string",
+        "roc_auc_mean": "float64",
+        "seed_count": "int64"
+      }
+    }
+  },
+  "report_contract": {
+    "dataset": "not reimplemented here; notebook 02 owns MovieLens-1M protocol artifacts",
+    "source": "notebook 07 multiseed evaluation bundle",
+    "thresholds": "inherited from validation-selected thresholds already verified by notebook 07",
+    "training": "none"
+  },
+  "report_schema_version": "results-report-v1",
+  "report_status": "WARN",
+  "summary": {
+    "best_mean_auc": 0.783909923684196,
+    "best_mean_f1": 0.669218106742055,
+    "best_model_by_mean_f1": "EmerG",
+    "cold_phase_winner": "DGD-Ablation:selected",
+    "source_warn_runs": 5,
+    "target_seed_count": 5
+  },
+  "upstream_multiseed": {
+    "bundle_id": "20260716T185613-38fcaedb68fd",
+    "coverage_status": "COMPLETE",
+    "evaluation_status": "WARN",
+    "pointer_sha256": "21b5bc89401638bd7cd9a76cc635a5f2825c2e7f36ed4b5d76f243b6be48a62c",
+    "schema_version": "multiseed-evaluation-v1"
+  }
+}

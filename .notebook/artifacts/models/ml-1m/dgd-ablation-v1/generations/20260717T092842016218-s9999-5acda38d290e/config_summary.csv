@@ -1,0 +1,5 @@
+variant,embedding_dim,hidden_dim,gnn_layers,learning_rate,warm_learning_rate,weight_decay,sparsemax_scale,topk_edges,epochs,epoch_sample_rows,batch_size,warm_steps,mix_orders,sparsifier,description
+emerg_exact_topk,16,64,2,0.001,0.01,1e-06,5.0,4,3,196608,4096,2,False,topk,Exact graph powers with hard Top-K selection; no learnable diffusion.
+mix_topk,16,64,2,0.001,0.01,1e-06,5.0,4,3,196608,4096,2,True,topk,Learnable graph-power mixing with hard Top-K selection.
+exact_sparsemax,16,64,2,0.001,0.01,1e-06,5.0,4,3,196608,4096,2,False,sparsemax,Exact graph powers with differentiable row-wise sparsemax.
+full_dgd,16,64,2,0.001,0.01,1e-06,5.0,4,3,196608,4096,2,True,sparsemax,Learnable graph-power mixing with differentiable row-wise sparsemax.

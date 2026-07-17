@@ -1,0 +1,6 @@
+seed,model_label,selected_variant,source_status,bundle_id
+2025,DGD-Ablation:selected,full_dgd,PASS,20260717T123348879045-s2025-f5e7acb856b6
+3407,DGD-Ablation:selected,full_dgd,PASS,20260717T124011847802-s3407-f49d7d5f0960
+4517,DGD-Ablation:selected,full_dgd,PASS,20260717T124219072077-s4517-bbe4defe524a
+7788,DGD-Ablation:selected,full_dgd,PASS,20260717T123556602111-s7788-14eef65a00e7
+9999,DGD-Ablation:selected,full_dgd,PASS,20260717T123805162399-s9999-13782db53d0d
